@@ -5,12 +5,12 @@ import Image from "next/image";
 
 const logos = [
 
-    { src: "/logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/logos/chipli.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/logos/Mestiza.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/logos/Hilltops.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/logos/RougeTimber.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/logos/FistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/chipli.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/Mestiza.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/Hilltops.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/RougeTimber.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/FistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
 ];
 
 const PER_PAGE = 4;
