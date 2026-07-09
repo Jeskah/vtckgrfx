@@ -78,9 +78,9 @@ export default function DesignPage() {
     </div>
     
 </div>
-    {/* <div className="w-75 mt-10">
+    <div className="w-100 p-15">
         <p className="text-white lowercase">Hey, I`m Jess, I`ve been a designer for over 10 years specalising in logo design and branding, later venturing into full-stack web devlopment</p>
-    </div> */}
+    </div>
 </div>
 
 </div>
