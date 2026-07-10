@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SocialsNav1 from "@/components/SocialsNav1";
 
 export default function DesignLayout({ children }) {
     return (

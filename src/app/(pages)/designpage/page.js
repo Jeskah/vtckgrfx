@@ -4,6 +4,7 @@ import DesignCard from "@/components/DesignCard";
 import { rajdhani } from "@/fonts";
 import { alegreyaSans } from "@/fonts";
 import Image from "next/image";
+import SocialsNav1 from "@/components/SocialsNav1";
 
 
 export default function DesignPage() {
@@ -16,7 +17,7 @@ export default function DesignPage() {
 
 
 
-<div className="bg-black/10 w-80 rounded-[7px]">
+<div className="bg-black/10 w-90 rounded-[7px]">
 <div className="flex flex-col items-center gap-4 mt-15 mb-20">
     <Image src="/apps.svg" alt="app icon vatick" height={70} width={70}/>
 
@@ -34,7 +35,7 @@ export default function DesignPage() {
     </div>
     </div>
 
-    <div className="flex flex-col justify-center mb-10 items-center text-center w-90 rounded-[7px] bg-black/85">
+    <div className="flex flex-col justify-center items-center text-center w-90 rounded-[7px] bg-black/85">
 <div className="{alegreyaSans.className} mt-10">
 <h1 className="text-white! text-[25px]! tracking-[1.5px]">The designer</h1>
 <h3 className="text-white/50 text-[12px] tracking-[1px]">Jessica Antoinette</h3>
@@ -46,7 +47,7 @@ export default function DesignPage() {
     </div>
 
 
-<div className="flex flex-col w-40 relative mb-10">
+<div className="flex flex-col w-40 relative mb-15">
     <div className="flex flex-col items-center text-center">
 
 <div className="relative w-57 left-7" style={{ height: '103px' }}>
@@ -70,19 +71,28 @@ export default function DesignPage() {
     </p>
 </div>
 
-
-
-
     <div/>
 
     </div>
     
 </div>
-    <div className="w-100 p-15">
-        <p className="text-white lowercase">Hey, I`m Jess, I`ve been a designer for over 10 years specalising in logo design and branding, later venturing into full-stack web devlopment</p>
-    </div>
+
 </div>
 
+<div className="flex flex-col w-90 overflow-hidden bg-black/85 text-center justify-center items-center rounded-[5px] mb-10">
+<div className="w-90 p-15 flex flex-col gap-8 items-center">
+
+<Image src="/x.svg" alt="x" width={50} height={10}/>
+
+
+        <h1 className={`${alegreyaSans.className} text-white! font-bold text-[30px]!`}>Bringing your brand to life</h1>
+        <p className="text-white lowercase w-65">From tranditional sketches to fully scalable vector artwork that can be used for any and all branding element from print and web. </p>
+    </div>
+
+    <div className="p-10">
+        <SocialsNav1/>
+    </div>
+</div>
 </div>
 )
 }
