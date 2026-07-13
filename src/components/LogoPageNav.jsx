@@ -10,7 +10,7 @@ export default function LogoPageNav() {
     const isBranding = pathname === '/designpage/logopage/brandingpage'
 
     return (
-        <nav className="flex flex-col relative right-6">
+        <nav className="flex flex-col relative right-8 -mt-5">
 
             <Link href="/designpage/logopage" 
             className={ 

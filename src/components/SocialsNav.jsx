@@ -13,11 +13,9 @@ export default function SocialsNav({ variant = "dark"}) {
     return (
     <div className="flex flex-col absolute top-10 right-2/25 -translate-x-1/2">
 
-        <div className={`flex flex-col justify-evenly gap-7 text-center items-center ${iconColor}`}>
+        <div className={`flex flex-col justify-evenly gap-7 text-center items-center mt-5 ${iconColor}`}>
 
         <Whatsapp width={40} height={40}/>
-        {/* <Instagram width={30} height={30}/>
-        <Linkedin width={30} height={30}/> */}
         <Email width={30} height={30}/>
 
 

@@ -6,11 +6,11 @@ export default function DesignLayout({ children }) {
     return (
         <div className="bg-gray-100 min-h-screen flex flex-col items-center">
 
-<Link href="/designpage" className="self-start inline-block">
+<Link href="/designpage" className="self-start inline-block relative right-3">
         <Image
         src="/VTCK-GRFX.svg"
-        width={220}
-        height={220}
+        width={250}
+        height={250}
         alt="Vatick Graphics VTCK GRFX design"
         className="self-start"/>
 </Link>

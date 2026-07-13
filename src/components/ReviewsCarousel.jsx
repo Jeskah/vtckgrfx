@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import StarRating from './StarRating';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ReviewsCarousel({ reviews }) {
     const [index, setIndex] = useState(0);
@@ -42,7 +43,15 @@ export default function ReviewsCarousel({ reviews }) {
                 <Image src='/quote.svg' alt='vtck quote reviews' height={25} width={25} style={{transform: 'scaleX(-1)'}} className='absolute -top-5 -right-16'></Image>
             </div>
 
-            {/* <p className='absolute -bottom-90 mt-10 text-[8px]! underline underline-offset-5'>Read more</p> */}
+
+            <Link href="../designpage/reviewpage">
+                <div className="flex flex-wrap p-2 rounded-sm w-25 justify-center bg-black/80 mt-13">
+            
+                    <p className="p-1 uppercase font-black text-white! text-center text-[8px]!">see more</p>
+            
+                </div>
+            </Link>
+
 
         </div>
     )

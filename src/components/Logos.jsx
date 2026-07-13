@@ -25,9 +25,10 @@ export default function LogoGrid() {
     const goForward = () => setPage((p) => (p + 1) % totalPages);
 
     return (
-        <>
 
-        <div className="flex flex-row gap-60 justify-evenly mt-6">
+        <>
+        <div className="flex flex-row justify-evenly relative gap-85 top-40 -mt-5">
+
 
         <button onClick={goBack}>
             <Image src='/arrow.svg' alt="" width={7} height={10}/>
@@ -38,7 +39,7 @@ export default function LogoGrid() {
 
         </div>
 
-        <div className="grid grid-cols-[repeat(2,130px)] gap-5 w-fit items-start mt-8 h-50">
+        <div className="grid grid-cols-[repeat(2,130px)] gap-3 w-fit items-start h-50">
             {visibleLogos.map((logo) => (
                 <Image
                 key={logo.src}
@@ -47,7 +48,6 @@ export default function LogoGrid() {
                 width={150}
                 height={150}/>
             ))}
-
         </div>
         </>
     )
