@@ -26,13 +26,19 @@ export default function LogoGrid() {
 
     return (
         <>
-        <div className="flex flex-row justify-evenly gap-20">
-            <button onClick={goBack}>←</button>
-            <h1 className="text-black!">LOGOS</h1>
-            <button onClick={goForward}>→</button>
+
+        <div className="flex flex-row gap-60 justify-evenly mt-6">
+
+        <button onClick={goBack}>
+            <Image src='/arrow.svg' alt="" width={7} height={10}/>
+        </button>
+        <button onClick={goForward}>
+            <Image src='/arrow.svg' alt="" width={7} height={10} style={{ transform: 'scaleX(-1)'}}/>
+        </button>
+
         </div>
 
-        <div className="grid grid-cols-[repeat(2,150px)] gap-5 w-fit items-start h-75">
+        <div className="grid grid-cols-[repeat(2,130px)] gap-5 w-fit items-start mt-8 h-50">
             {visibleLogos.map((logo) => (
                 <Image
                 key={logo.src}

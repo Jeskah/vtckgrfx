@@ -1,10 +1,9 @@
-"use client"
-
 import DesignCard from "@/components/DesignCard";
 import { rajdhani } from "@/fonts";
 import { alegreyaSans } from "@/fonts";
 import Image from "next/image";
 import SocialsNav1 from "@/components/SocialsNav1";
+import Reviews from "@/components/Reviews";
 
 
 export default function DesignPage() {
@@ -17,7 +16,7 @@ export default function DesignPage() {
 
 
 
-<div className="bg-black/10 w-90 rounded-[7px]">
+<div className="bg-black/10 w-80 rounded-[7px]">
 <div className="flex flex-col items-center gap-4 mt-15 mb-20">
     <Image src="/apps.svg" alt="app icon vatick" height={70} width={70}/>
 
@@ -35,7 +34,7 @@ export default function DesignPage() {
     </div>
     </div>
 
-    <div className="flex flex-col justify-center items-center text-center w-90 rounded-[7px] bg-black/85">
+    {/* <div className="flex flex-col justify-center items-center text-center w-90 rounded-[7px] bg-black/85">
 <div className="{alegreyaSans.className} mt-10">
 <h1 className="text-white! text-[25px]! tracking-[1.5px]">The designer</h1>
 <h3 className="text-white/50 text-[12px] tracking-[1px]">Jessica Antoinette</h3>
@@ -77,9 +76,14 @@ export default function DesignPage() {
     
 </div>
 
+</div> */}
+
+
+<div className="h-50 w-100 flex flex-col text-center items-center mb-10">
+    <Reviews/>
 </div>
 
-<div className="flex flex-col w-90 overflow-hidden bg-black/85 text-center justify-center items-center rounded-[5px] mb-10">
+<div className="flex flex-col w-85 overflow-hidden bg-black/85 text-center justify-center items-center rounded-[5px] mb-10">
 <div className="w-90 p-15 flex flex-col gap-8 items-center">
 
 <Image src="/x.svg" alt="x" width={50} height={10}/>
