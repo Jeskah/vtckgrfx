@@ -15,7 +15,7 @@ export default function LogoPage() {
             {/* <h2>Premium custom logo design</h2> */}
 
 <div className="mt-22">
-            <Image src='/sketch2vector.svg' alt='' width={270} height={100}/>
+            <Image src='/sketchtovector.svg' alt='' width={270} height={100}/>
 </div>
 
     <div className="p-14 text-center bg-blue-400 h-130 gap-40 flex flex-col items-center">
