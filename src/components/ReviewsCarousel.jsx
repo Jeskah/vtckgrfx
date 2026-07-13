@@ -42,7 +42,7 @@ export default function ReviewsCarousel({ reviews }) {
                 <Image src='/quote.svg' alt='vtck quote reviews' height={25} width={25} style={{transform: 'scaleX(-1)'}} className='absolute -top-5 -right-16'></Image>
             </div>
 
-            <p className='absolute -bottom-90 mt-10 text-[8px]! underline underline-offset-5'>Read more</p>
+            {/* <p className='absolute -bottom-90 mt-10 text-[8px]! underline underline-offset-5'>Read more</p> */}
 
         </div>
     )
