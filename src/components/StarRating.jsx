@@ -1,11 +1,11 @@
-export default function StarRating({ rating }) {
+export default function StarRating({ rating, size = 18 }) {
     return (
         <div style={{ display: 'flex', gap:'2px' }}>
             {[...Array(5)].map((_, i) => (
                 <svg
                 key={i}
-                width="18"
-                height="18"
+                width={size}
+                height={size}
                 viewBox="0 0 24 24"
                 fill={i < rating ? '#facc15' : 'none'}
                 stroke="#facc15"
