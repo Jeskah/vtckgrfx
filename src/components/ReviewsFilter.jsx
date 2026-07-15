@@ -1,28 +1,43 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import Underline from "../../public/underline.svg"
+
 
 const PROJECT_TYPES = ["Logo Design", "Branding", "Illustration", "Packaging", "Typography", "Website"]
 
 export default function ReviewsFilter() {
     const [open, setOpen] = useState(false);
+    const containerRef = useRef(null);
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
+
     const sort = searchParams.get("sort") || "newest";
     const activeFilters = searchParams.get("filter")?.split(",").filter(Boolean) || [];
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if ( containerRef.current && !containerRef.current.contains(event.target)){
+                setOpen(false);
+        }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
 
     function updateParams(updates) {
         const newParams = new URLSearchParams(searchParams.toString());
         Object.entries(updates).forEach(([key, value]) => {
-    if (value) newParams.set(key, value);
-else newParams.delete(key);
-});
+            if (value) newParams.set(key, value);
+            else newParams.delete(key);
+        });
 
-newParams.set("page", "1");
-router.push(`${pathname}?${newParams.toString()}`)
+        newParams.set("page", "1");
+        router.push(`${pathname}?${newParams.toString()}`);
 
 }
 
@@ -38,32 +53,32 @@ return (
         <button onClick={() => updateParams({ sort: "newest"})} className={ sort === "newest" ? "font-black" : "text-black/40"}>
             Newest
         </button>
-                <button onClick={() => updateParams({ sort: "oldest"})} className={ sort === "oldest" ? "font-black" : "text-black/40"}>
-            Newest
+        <button onClick={() => updateParams({ sort: "oldest"})} className={ sort === "oldest" ? "font-black" : "text-black/40"}>
+            Oldest
         </button>
 
-        <div>
+        <div ref={containerRef} className="">
             <button onClick={() => setOpen(!open)} className="font-black">
-                Type { activeFilters.length > 0 && `(${activeFilters.length})` }
+                Project 
+            { activeFilters.length > 0 && `(${activeFilters.length })` }
             </button>
 
             {open && (
-                <div className="absolute top-6 left-0 flex flex-col bg-white border rounded-xs shadow p-3 gap-2 z-10 w-48">
+                <div className="absolute w-screen p-5 flex flex-row bg-white whitespace-nowrap rounded-xs left-0 overflow-scroll gap-12 z-10">
                     {PROJECT_TYPES.map((type) => (
                         <label key={type} className="flex flex-row items-center gap-1">
                             <input
-                            type="checkbox"
+                            type="button"
                             checked={activeFilters.includes(type)}
                             onChange={() => toggleType(type)}
                             />
-
                             {type}
-                            
+
+                            {selected && (
+                                <Underline/>
+                            )}
                         </label>
                     ))}
-                    <button onClick={() => setOpen(false)} className="mt-2 text-black/50 underline">
-                        Close
-                    </button>
                 </div>
             )}
         </div>

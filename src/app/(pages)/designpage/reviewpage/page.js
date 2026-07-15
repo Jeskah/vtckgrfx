@@ -3,6 +3,7 @@ import { alegreyaSans } from "@/fonts"
 import StarRating from "@/components/StarRating"
 import Link from "next/link";
 import Image from "next/image";
+import ReviewsFilter from "@/components/ReviewsFilter";
 
 const PAGE_SIZE = 5;
 
@@ -32,19 +33,34 @@ export default async function ReviewsPage({ searchParams }) {
         const totalPages = Math.ceil((count || 0) / PAGE_SIZE);
 
     return (
+        
         <div className="flex flex-col px-10">
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-row justify-evenly mb-3 text-[12px] w-80">
+
+            {page > 1 && (
+                <Link href={`?sort=${sort}&page=${page -1}`}>
+                    <Image src="/arrow.svg" alt="" width={5} height={5}/>
+                </Link>
+            )}
+
+            <span> {page} / {totalPages}</span>
+
+
+            {page < totalPages && (
+                <Link href={`?sort=${sort}&page=${page + 1}`}>
+                    <Image src="/arrow.svg" alt="" width={5} height={5} style={{ transform: 'scaleX(-1)'}}/>
+                </Link>
+            )}
+
+</div>
+
+            <div className="flex flex-col gap-2 -mt-10">
                 <h1 className={`${alegreyaSans.className} text-black! text-[20px]! text-center`}>Reviews</h1>
 
-                <div>
-                    <Link href={`?sort=date&page=1`}>Newest</Link>
-                    <Link href={`?sort=rating&page=1`}>Top Rated</Link>
-                    <Link href={`?sort=project&page=1`}>Project Type</Link>
-                </div>
-            
+                <ReviewsFilter/>
 
 
-            <div className="flex flex-col gap-4 items-center justify-center mb-10">
+            <div className="flex flex-col gap-4 items-center justify-center mb-10 mt-10">
                 {reviews.map((review) => (
                     <div key={review.id}>
                         <div className="w-80 flex flex-col mb-2">
@@ -63,20 +79,6 @@ export default async function ReviewsPage({ searchParams }) {
                     </div>
                 ))}
             </div>
-<div className="flex flex-row gap-6 justify-evenly mb-10 text-[12px]">
-    <span> {page} / {totalPages}</span>
-
-    {page > 1 && (
-        <Link href={`?sort=${sort}&page=${page -1}`}>
-            <Image src="/arrow.svg" alt="" width={10} height={10}/>
-        </Link>
-    )}
-    {page < totalPages && (
-        <Link href={`?sort=${sort}&page=${page + 1}`}>
-            <Image src="/arrow.svg" alt="" width={10} height={10} style={{ transform: 'scaleX(-1)'}}/>
-        </Link>
-    )}
-        </div>
         </div>
         </div>
     )

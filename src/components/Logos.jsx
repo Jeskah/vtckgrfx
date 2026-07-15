@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Arrow from "../../public/arrow.svg"
 
 const logos = [
 
@@ -27,19 +28,17 @@ export default function LogoGrid() {
     return (
 
         <>
-        <div className="flex flex-row justify-evenly relative gap-85 top-40 -mt-5">
+        <div className="flex -mt-45 flex-row gap-85 relative top-50 h-50">
 
-
-        <button onClick={goBack}>
-            <Image src='/arrow.svg' alt="" width={7} height={10}/>
+        <button onClick={goBack} className="relative top-14">
+            <Arrow width={20} height={10} style={{ fill: 'black'}}/>
         </button>
-        <button onClick={goForward}>
-            <Image src='/arrow.svg' alt="" width={7} height={10} style={{ transform: 'scaleX(-1)'}}/>
+        <button onClick={goForward} className="relative top-14">
+            <Arrow width={20} height={10} style={{fill: 'black', transform: 'scaleX(-1)'}}/>
         </button>
-
         </div>
 
-        <div className="grid grid-cols-[repeat(2,130px)] gap-3 w-fit items-start h-50">
+        <div className="grid grid-cols-[repeat(2,150px)] gap-3 w-fit items-start h-50 -mt-5">
             {visibleLogos.map((logo) => (
                 <Image
                 key={logo.src}
