@@ -5,13 +5,14 @@ import SocialsNav1 from "@/components/SocialsNav1";
 import Reviews from "@/components/Reviews";
 
 
+
 export default function DesignPage() {
     return (
             <div className="flex flex-col uppercase items-center gap-10">
                 
                 <DesignCard image='/Amolith.png' alt='Amolith Logo Design Vatick' title='Logo design / branding' href='/designpage/logopage' objectPosition='10% 50%' transform='translateX(95px) translateY(0px) scale(1.2)'/>
 
-                <DesignCard image='/vatick-graff.jpg' alt='typeohraphy custom Logo Design Vatick graffiti' title='Custom fonts / typography' href='/' objectPosition='10% 50%' transform='translateX(80px) translateY(24px) scale(1.9)'/>
+                <DesignCard image='/vatick-graff.jpg' alt='typeography custom Logo Design Vatick graffiti' title='Custom fonts / typography' href='/designpage/typographypage' objectPosition='10% 50%' transform='translateX(80px) translateY(24px) scale(1.9)'/>
 
 
 

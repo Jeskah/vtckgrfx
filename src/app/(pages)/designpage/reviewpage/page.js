@@ -13,6 +13,7 @@ export default async function ReviewsPage({ searchParams }) {
         const params = await searchParams;
         const page = Number(params.page) || 1;
         const sort = params.sort || "date";
+        const filter = params.filter ? params.filter.split(",") : [];
 
         const sortColumn = {
             rating: "rating",
@@ -24,17 +25,21 @@ export default async function ReviewsPage({ searchParams }) {
         const from = (page - 1) * PAGE_SIZE;
         const to = from + PAGE_SIZE - 1;
 
-        const { data: reviews, count } = await supabase
-        .from("reviews")
-        .select("*", { count: "exact" })
-        .order(sortColumn, { ascending: false })
-        .range(from, to);
+        let query = supabase
+            .from("reviews")
+            .select("*", { count: "exact"})
+            .order(sortColumn, {ascending: sort === "oldest"})
+            .range(from, to);
 
+            if (filter.length > 0) {
+                query = query.overlaps("work_type", filter);
+            }
+        const { data: reviews, count } = await query;
         const totalPages = Math.ceil((count || 0) / PAGE_SIZE);
 
     return (
         
-        <div className="flex flex-col px-10">
+        <div className="flex flex-col px-10 min-w-0">
             <div className="flex flex-row justify-evenly mb-3 text-[12px] w-80">
 
             {page > 1 && (

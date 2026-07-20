@@ -2,8 +2,6 @@
 
 import DesignButton from "@/components/DesignButton";
 import SoundButton from "@/components/SoundButton";
-import SocialsNav from "@/components/SocialsNav";
-
 
 
 export default function Skills() {

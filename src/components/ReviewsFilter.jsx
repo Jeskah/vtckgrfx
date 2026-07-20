@@ -49,7 +49,10 @@ function toggleType(type) {
 }
 
 return (
-    <div className="flex flex-row gap-6 items-center justify-center text-[12px]">
+
+<div ref={containerRef} className="flex flex-col gap-2 min-w-0 overflow-hidden">
+
+        <div className="flex flex-row gap-6 items-center justify-center text-[12px]">
         <button onClick={() => updateParams({ sort: "newest"})} className={ sort === "newest" ? "font-black" : "text-black/40"}>
             Newest
         </button>
@@ -57,32 +60,31 @@ return (
             Oldest
         </button>
 
-        <div ref={containerRef} className="">
-            <button onClick={() => setOpen(!open)} className="font-black">
-                Project 
-            { activeFilters.length > 0 && `(${activeFilters.length })` }
-            </button>
+                <button onClick={() => setOpen(!open)} className="font-black">
+                    Project 
+                { activeFilters.length > 0 && `(${activeFilters.length })` }
+                </button>
+        </div>
 
             {open && (
-                <div className="absolute w-screen p-5 flex flex-row bg-white whitespace-nowrap rounded-xs left-0 overflow-scroll gap-12 z-10">
-                    {PROJECT_TYPES.map((type) => (
-                        <label key={type} className="flex flex-row items-center gap-1">
-                            <input
-                            type="button"
-                            checked={activeFilters.includes(type)}
-                            onChange={() => toggleType(type)}
-                            />
-                            {type}
-
-                            {selected && (
-                                <Underline/>
-                            )}
-                        </label>
-                    ))}
+                <div className="max-w-screen p-5 flex flex-row bg-white whitespace-nowrap rounded-xs overflow-scroll gap-12 z-10">
+                        {PROJECT_TYPES.map((type) => {
+                            const isSelected = activeFilters.includes(type);
+                            return (
+                                <button
+                                key={type}
+                                type="button"
+                                onClick={() => toggleType(type)}
+                                className="flex flex-col items-center gap-1"
+                                >
+                                    {type}
+                                    {isSelected && <Underline style={{ fill:"text-white"}} className="w-10.5"/>}
+                                </button>
+                            )
+                        })}
                 </div>
             )}
         </div>
-    </div>
-)
+    )
 
 }

@@ -1,7 +1,6 @@
 import "./globals.css";
 import Logo from "../../public/vatick-logo-graff.svg";
 import ExploreButton from "@/components/ExploreButton"
-import SocialsNav from "@/components/SocialsNav";
 
 export default function WelcomePage() {
 return (

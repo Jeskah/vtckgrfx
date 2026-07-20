@@ -6,13 +6,15 @@ import "./globals.css";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  const lightVariantRoutes = ["/", "/skills"];
+  const lightVariantRoutes = ["/", "/skills", "/designpage/typographypage"];
   const variant = lightVariantRoutes.includes(pathname) ? "light" : "dark";
+  const hideSocialsNav = pathname.includes("/typographypage")
+  console.log("pathname:", pathname)
 
   return (
     <html lang="en">
       <body>
-        <SocialsNav variant={variant}/>
+        {!hideSocialsNav && <SocialsNav variant={variant}/>}
         {children}
       </body>
     </html>
