@@ -1,9 +1,3 @@
-const config = {
-  plugins: {
-    "@tailwindcss/postcss": {},
-  },
-};
-
 module.exports = {
     theme: {
         extend: {
@@ -19,5 +13,3 @@ module.exports = {
         },
     },
 }
-
-export default config;
