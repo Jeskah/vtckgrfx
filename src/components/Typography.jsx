@@ -1,13 +1,11 @@
 'use client'
 
 import { useState } from "react";
-// import Image from "next/image";
 import { fugazOne } from "@/fonts";
 
 import AmolithType from "@public/Amolith-Type.svg"
 import MovingSpooky from "@public/MovingSpooky.svg"
 import Tahili from "@public/Tahili.svg"
-import VatickGraff from "@public/VatickGraff.svg"
 import VatickBlocky from "@public/VATICKBLOCKY.svg"
 import Arrow from "@public/arrow.svg"
 

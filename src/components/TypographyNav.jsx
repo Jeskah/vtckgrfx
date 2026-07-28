@@ -14,15 +14,15 @@ export default function TypographyNav() {
             
         <div className="flex fixed w-full h-24 border-[#97a590] z-10">
 
-<div className="absolute">
+
 <VtckGrfx className="left-12 -top-16 w-22 h-40 relative [&_path]:fill-current text-[#97a590] -rotate-7 opacity-50"/>
-</div>
 
 
-<div className="flex flex-row bottom-0 absolute left-64 text-[#97a590]">
+
+<div className="flex flex-row bottom-0 absolute left-50 text-[#97a590]">
 
 <button onClick={() => setIsOpen(!isOpen)}>
-    <div className="h-5 w-15 bottom-0 items-center justify-center flex rounded-t-[3px]">
+    <div className="h-5 w-15 bottom-0 items-center justify-center flex relative rounded-t-[3px]">
             <p className={`${fugazOne.className} tracking-widest! text-[12px]!`}>
         STYLES
             </p>
@@ -38,7 +38,18 @@ export default function TypographyNav() {
         </div>
 </Link>
 
-{isOpen && <TypographyStylesNav/>}
+<Link href="/designpage/typographypage">
+    <div className="h-5 w-15 bottom-0 items-center justify-center flex rounded-t-[3px]">
+            <p className={`${fugazOne.className} tracking-widest! text-[12px]!`}>
+        HOME
+            </p>
+        </div>
+</Link>
+
+{isOpen && 
+<div className="absolute left-45">
+    <TypographyStylesNav/>
+</div>}
 
 
 </div>
