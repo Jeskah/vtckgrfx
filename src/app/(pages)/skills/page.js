@@ -7,8 +7,10 @@ import SoundButton from "@/components/SoundButton";
 export default function Skills() {
     return (
         <div className="flex flex-col gap-20 items-center relative">
+
+            <h1></h1>
             
-            <div className="flex flex-col gap-15 pt-50">
+            <div className="flex flex-col gap-15 mt-70">
 
                 <div>
                     <SoundButton/>

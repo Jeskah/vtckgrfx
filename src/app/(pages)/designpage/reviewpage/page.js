@@ -40,26 +40,27 @@ export default async function ReviewsPage({ searchParams }) {
     return (
         
         <div className="flex flex-col px-10 min-w-0">
-            <div className="flex flex-row justify-evenly mb-3 text-[12px] w-80">
+<div className="flex flex-row justify-evenly mb-3 text-[12px] w-80">
 
-            {page > 1 && (
-                <Link href={`?sort=${sort}&page=${page -1}`}>
-                    <Image src="/arrow.svg" alt="" width={5} height={5}/>
-                </Link>
-            )}
+    <Link
+        href={`?sort=${sort}&page=${page - 1}`}
+        className={page > 1 ? "" : "invisible pointer-events-none"}
+    >
+        <Image src="/arrow.svg" alt="" width={5} height={5}/>
+    </Link>
 
-            <span> {page} / {totalPages}</span>
+    <span> {page} / {totalPages}</span>
 
-
-            {page < totalPages && (
-                <Link href={`?sort=${sort}&page=${page + 1}`}>
-                    <Image src="/arrow.svg" alt="" width={5} height={5} style={{ transform: 'scaleX(-1)'}}/>
-                </Link>
-            )}
+    <Link
+        href={`?sort=${sort}&page=${page + 1}`}
+        className={page < totalPages ? "" : "invisible pointer-events-none"}
+    >
+        <Image src="/arrow.svg" alt="" width={5} height={5} style={{ transform: 'scaleX(-1)'}}/>
+    </Link>
 
 </div>
 
-            <div className="flex flex-col gap-2 -mt-10">
+            <div className="flex flex-col gap-2 -mt-1">
                 <h1 className={`${alegreyaSans.className} text-black! text-[20px]! text-center`}>Reviews</h1>
 
                 <ReviewsFilter/>

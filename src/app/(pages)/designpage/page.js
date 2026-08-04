@@ -3,6 +3,7 @@ import { alegreyaSans } from "@/fonts";
 import Image from "next/image";
 import SocialsNav1 from "@/components/SocialsNav1";
 import Reviews from "@/components/Reviews";
+import XIcon from "@public/x.svg"
 
 
 
@@ -42,7 +43,7 @@ export default function DesignPage() {
 <div className="flex flex-col w-85 overflow-hidden bg-black/85 text-center justify-center items-center rounded-[5px] mb-10">
 <div className="w-90 p-15 flex flex-col gap-8 items-center">
 
-<Image src="/x.svg" alt="x" width={50} height={10}/>
+<XIcon src="/x.svg" alt="x" width={50} height={60} className="[&_path]:fill-current text-white"/>
 
 
         <h1 className={`${alegreyaSans.className} text-white! font-bold text-[30px]!`}>Bringing your brand to life</h1>

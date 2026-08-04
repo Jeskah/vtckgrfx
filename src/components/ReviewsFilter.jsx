@@ -67,7 +67,7 @@ return (
         </div>
 
             {open && (
-                <div className="max-w-screen p-5 flex flex-row bg-white whitespace-nowrap rounded-xs overflow-scroll gap-12 z-10">
+                <div className="w-80 p-5 flex flex-row whitespace-nowrap rounded-xs gap-5 z-10 flex-wrap justify-center text-[10px] relative">
                         {PROJECT_TYPES.map((type) => {
                             const isSelected = activeFilters.includes(type);
                             return (

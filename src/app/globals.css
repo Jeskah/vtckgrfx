@@ -10,7 +10,7 @@
 }
 
 body {
-    background: #201c1e;
+    background: #212121;
 }
 
 p {
@@ -23,11 +23,11 @@ p {
 h1 {
     font-size: 20px;
     font-weight: bold;
-    color: #ddb4d6;
+    color: #dcd4da;
 };
 
 h2 {
     font-size: 15px;
     font-weight: bold;
-    color:#ddb4d6;
+    color:#dcd4da;
 }

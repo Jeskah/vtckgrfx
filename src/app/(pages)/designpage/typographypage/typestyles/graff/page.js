@@ -1,12 +1,10 @@
 import Graffiti from "@/components/Graffiti"
 
-export default function Graff() {
+export default function GraffPage() {
     return (
-        <div className="flex flex-col items-center bg-red-500">
-                <h1>Graffiti</h1>
-
-                <Graffiti/>
-</div>
-
+        <div>
+            <h1>Graffiti</h1>
+            <Graffiti/>
+        </div>
     )
 }

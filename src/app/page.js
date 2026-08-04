@@ -5,17 +5,17 @@ import ExploreButton from "@/components/ExploreButton"
 export default function WelcomePage() {
 return (
 
-    <div className="min-w-screen min-h-screen flex flex-col align-center text-center gap-20 mt-35">
+    <div className="min-w-screen h-full flex flex-col align-center text-center gap-15 mt-35">
 
-    <div className="flex justify-center items-center mt-5">
-        <Logo width={380} height={380}/>
+    <div className="flex justify-center items-center mt-10">
+        <Logo width={300} height={300}/>
     </div>
 
-{/* <div className="gap-3 flex flex-col">
+<div className="gap-5 flex flex-col">
       <h1>Welcome</h1>
 
-      <p className="px-15 text-[#ddb4d6]">Within this site you will find a body of work relating to a variety of creative practices from full-stack website development, music production, design and more</p>
-</div> */}
+      <p className="px-15 text-[#dcd4da]">Within this site you will find a body of work relating to a variety of creative practices from full-stack website development, music production, design and more</p>
+</div>
 
       <ExploreButton/>
 
