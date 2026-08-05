@@ -4,6 +4,7 @@ import StarRating from "@/components/StarRating"
 import Link from "next/link";
 import Image from "next/image";
 import ReviewsFilter from "@/components/ReviewsFilter";
+import WriteReviewsModal from "@/components/WriteReviewModal";
 
 const PAGE_SIZE = 5;
 
@@ -40,36 +41,40 @@ export default async function ReviewsPage({ searchParams }) {
     return (
         
         <div className="flex flex-col px-10 min-w-0">
-<div className="flex flex-row justify-evenly mb-3 text-[12px] w-80">
 
-    <Link
-        href={`?sort=${sort}&page=${page - 1}`}
-        className={page > 1 ? "" : "invisible pointer-events-none"}
-    >
-        <Image src="/arrow.svg" alt="" width={5} height={5}/>
-    </Link>
+            <div className="flex flex-row justify-evenly text-[12px] w-80 mb-6">
 
-    <span> {page} / {totalPages}</span>
+                <Link
+                    href={`?sort=${sort}&page=${page - 1}`}
+                    className={page > 1 ? "" : "invisible pointer-events-none"}
+                >
+                    <Image src="/arrow.svg" alt="" width={5} height={5}/>
+                </Link>
 
-    <Link
-        href={`?sort=${sort}&page=${page + 1}`}
-        className={page < totalPages ? "" : "invisible pointer-events-none"}
-    >
-        <Image src="/arrow.svg" alt="" width={5} height={5} style={{ transform: 'scaleX(-1)'}}/>
-    </Link>
+                <span> {page} / {totalPages}</span>
 
-</div>
+                <Link
+                    href={`?sort=${sort}&page=${page + 1}`}
+                    className={page < totalPages ? "" : "invisible pointer-events-none"}
+                >
+                    <Image src="/arrow.svg" alt="" width={5} height={5} style={{ transform: 'scaleX(-1)'}}/>
+                </Link>
+
+            </div>
 
             <div className="flex flex-col gap-2 -mt-1">
+
+                
                 <h1 className={`${alegreyaSans.className} text-black! text-[20px]! text-center`}>Reviews</h1>
 
                 <ReviewsFilter/>
+                <WriteReviewsModal/>
 
 
             <div className="flex flex-col gap-4 items-center justify-center mb-10 mt-10">
                 {reviews.map((review) => (
                     <div key={review.id}>
-                        <div className="w-80 flex flex-col mb-2">
+                        <div className="w-70 flex flex-col mb-2">
                             <h1 className={`${alegreyaSans.className} text-black! text-[15px]!`}>{review.name}</h1>
                             <p className="italic text-[10px]!">{review.work_type[0]}</p>
 
@@ -85,6 +90,7 @@ export default async function ReviewsPage({ searchParams }) {
                     </div>
                 ))}
             </div>
+            
         </div>
         </div>
     )

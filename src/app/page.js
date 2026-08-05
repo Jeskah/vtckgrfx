@@ -14,7 +14,7 @@ return (
 <div className="gap-5 flex flex-col">
       <h1>Welcome</h1>
 
-      <p className="px-15 text-[#dcd4da]">Within this site you will find a body of work relating to a variety of creative practices from full-stack website development, music production, design and more</p>
+      <p className="px-15 text-[#dcd4da]">Within this site you will find a body of work relating to a variety of creative practices from full-stack website development, music production, creative design, complete branding & more</p>
 </div>
 
       <ExploreButton/>

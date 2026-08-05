@@ -10,7 +10,7 @@ export default function Skills() {
 
             <h1></h1>
             
-            <div className="flex flex-col gap-15 mt-70">
+            <div className="flex flex-col gap-15 mt-40">
 
                 <div>
                     <SoundButton/>
