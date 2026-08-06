@@ -15,11 +15,11 @@ export default function TypographyNav() {
         <div className="flex fixed w-full h-24 border-[#97a590] z-10">
 
 
-<VtckGrfx className="left-12 -top-16 w-22 h-40 relative [&_path]:fill-current text-[#97a590] -rotate-7 opacity-50"/>
+<VtckGrfx className="left-5 -top-16 w-22 h-40 relative [&_path]:fill-current text-[#97a590] -rotate-7 opacity-50"/>
 
 
 
-<div className="flex flex-row bottom-0 absolute left-50 text-[#97a590]">
+<div className="flex flex-row bottom-0 absolute left-40 text-[#97a590]">
 
 <button onClick={() => setIsOpen(!isOpen)}>
     <div className="h-5 w-15 bottom-0 items-center justify-center flex relative rounded-t-[3px]">
@@ -47,7 +47,7 @@ export default function TypographyNav() {
 </Link>
 
 {isOpen && 
-<div className="absolute left-45">
+<div className="absolute left-40">
     <TypographyStylesNav/>
 </div>}
 

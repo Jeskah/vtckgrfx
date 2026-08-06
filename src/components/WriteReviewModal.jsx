@@ -34,11 +34,6 @@ export default function WriteReviewsModal() {
             }
         }, [state]);
 
-        useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-}, [open]);
-
         if(alreadyReviewed) return null;
 
         return (

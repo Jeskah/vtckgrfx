@@ -15,7 +15,7 @@ export default function TypographyStylesNav() {
     const pathname = usePathname();
 
     return (
-        <div className="relative top-7 right-60 w-57 flex gap-3 mt-2 overflow-scroll">
+        <div className="relative top-7 right-48 w-50 flex gap-3 mt-2 overflow-scroll">
             {styles.map(({ label, href }) => {
                 const isActive = pathname === href;
 
