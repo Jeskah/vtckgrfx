@@ -1,24 +1,24 @@
 import "./globals.css";
 import Logo from "../../public/vatick-logo-graff.svg";
-import ExploreButton from "@/components/ExploreButton"
+import NavButton from "@/components/NavButton";
+import { fugazOne } from "@/fonts";
 
 export default function WelcomePage() {
 return (
 
-    <div className="min-w-screen h-full flex flex-col align-center text-center gap-15 mt-35">
+    <div className="min-w-screen h-screen flex items-center flex-col align-center text-center gap-15 relative overflow-hidden">
 
-    <div className="flex justify-center items-center mt-10">
-        <Logo width={300} height={300}/>
+      <h2 className={`${fugazOne.className} uppercase bottom-3 justify-center items-center flex fixed text-[12px]! `}>www.vatick.com</h2>
+
+
+    <div className="flex flex-col absolute inset-0 gap-15 justify-center items-center z-10">
+      <NavButton href="/designpage" label="DESIGN"/>
+      <NavButton href="/soundpage" label="SOUND"/>
     </div>
 
-<div className="gap-5 flex flex-col">
-      <h1>Welcome</h1>
-
-      <p className="px-15 text-[#dcd4da]">Within this site you will find a body of work relating to a variety of creative practices from full-stack website development, music production, creative design, complete branding & more</p>
-</div>
-
-      <ExploreButton/>
-
+    <div className="relative bottom-70 left-7 rotate-3 opacity-10">
+        <Logo width={1400} height={1400}/>
+    </div>
     </div>
   )
 }
