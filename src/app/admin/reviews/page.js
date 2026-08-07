@@ -5,7 +5,7 @@ import { approveReview, rejectReview } from "@/actions/admin";
 export const dynamic = "force-dynamic";
 
 export default async function AdminReviewPage() {
-    const { data, pending, error } = await supabaseAdmin
+    const { data: pending, error } = await supabaseAdmin
     .from("reviews")
     .select("*")
     .eq("approved", false)
@@ -16,14 +16,18 @@ export default async function AdminReviewPage() {
     }
 
     return (
-        <div className="flex flex-col gap-4 p-4 max-w-2xl max-auto">
-            <h1 className="text-xl font-bold">
-                Pending Reviews ({ pending.reviews })
-            </h1>
+        <div className="flex flex-col gap-4 max-w-2xl max-auto bg-white h-screen">
 
-            {pending.length === 0 && (
-                <p>No reviews pending</p>
-            )}
+
+            <div className="items-center text-center mt-80 gap-4 flex flex-col">
+                <h1 className="text-xl font-bold text-black!">
+                    Pending Reviews ({ pending.length })
+                </h1>
+
+                {pending.length === 0 && (
+                    <p>No reviews pending</p>
+                )}
+            </div>
 
             {pending.map((review) => (
                 <div key={review.id} className="border rounded-[3px]">
@@ -38,16 +42,9 @@ export default async function AdminReviewPage() {
                 <p className={`text-xs ${review.worked_with_me ? "text-sm" : "text-sm"}`}>
 
                     {review.worked_with_me ? "confirmed" : "did not work with me"}
-
                 </p>
 
-                <p className="text-sm">&quot;{review.review}&quot;</p>
-                <p className="text-[10px] text-gray-400">{review.created_at}</p>
-
-                </div>
-            ))}
-
-            <div className="flex">
+                            <div className="flex">
                 <form action={approveReview.bind(null, review.id)}>
                     <button type="submit" className="bg-green-500 text-white">
                         Approve
@@ -60,6 +57,12 @@ export default async function AdminReviewPage() {
                     </button>
                 </form>
             </div>
+
+                <p className="text-sm">&quot;{review.review}&quot;</p>
+                <p className="text-[10px] text-gray-400">{review.created_at}</p>
+
+                </div>
+            ))}
         </div>
     )
 };
