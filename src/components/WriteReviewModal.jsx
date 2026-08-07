@@ -60,7 +60,7 @@ export default function WriteReviewsModal() {
             </div>
 
             {open && (
-                <div className="flex z-10 items-center justify-center bg-[#ffffff] opacity-95 w-screen fixed inset-0">
+                <div className="flex z-10 items-center justify-center bg-[#ffffff] opacity-99 w-screen fixed inset-0">
                     <form action={formAction}>
                         <input type="hidden" name="device_id" value={deviceId} />
                         
