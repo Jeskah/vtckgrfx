@@ -1,5 +1,6 @@
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import StarRating from "@/components/StarRating";
+import { approveReview, rejectReview } from "@/actions/admin";
 
 export const dynamic = "force-dynamic";
 
@@ -45,7 +46,20 @@ export default async function AdminReviewPage() {
 
                 </div>
             ))}
-            
+
+            <div className="flex">
+                <form action={approveReview.bind(null, review.id)}>
+                    <button type="submit" className="bg-green-500 text-white">
+                        Approve
+                    </button>
+                </form>
+
+                <form action={rejectReview.bind(null, review.id)}>
+                    <button type="submit" className="bg-red-500 text-white">
+                        Reject
+                    </button>
+                </form>
+            </div>
         </div>
     )
 };
