@@ -12,7 +12,7 @@ const graffs = [
 export default function Graffiti() {
 
     return (
-        <div className="grid grid-rows-2 gap-10 bg-blue-400 mt-50">
+        <div className="grid grid-rows-2 gap-10 bg-blue-400 mt-10">
         {graffs.map((graff, index) => {
             const GraffSvg = graff.svg
 
