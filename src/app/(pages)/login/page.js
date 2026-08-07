@@ -4,6 +4,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createBrowserClient } from "@supabase/ssr";
 import { fugazOne } from "@/fonts";
+import AdminNav from "@/components/AdminNav";
+
+
 
 const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -15,6 +18,10 @@ export default function LoginPage() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const router = useRouter();
+
+    const handleBack = () => {
+        router.back();
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,6 +37,10 @@ export default function LoginPage() {
 
         return (
             <div className="flex relative bg-white h-screen">
+                
+<div className="absolute">
+<AdminNav/>
+</div>
 
                 <form onSubmit={handleSubmit} className="flex flex-col relative justify-center items-center gap-10 w-100">
                     <h1 className={`${fugazOne.className} uppercase text-black! `}>Admin Login</h1>
@@ -55,6 +66,10 @@ export default function LoginPage() {
 
                 <button type="submit" className={`${fugazOne.className} bg-black text-white p-4 w-30 rounded-[5px] text-sm uppercase`}>
                     Log In
+                </button>
+
+                <button onClick={handleBack}>
+                    Back
                 </button>
 
                 </form>
