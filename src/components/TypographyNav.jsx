@@ -10,9 +10,9 @@ export default function TypographyNav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex bg-[#232323] w-screen h-35 z-10 flex-col relative right-6">
+        <div className="flex bg-[#232323] w-screen z-10 flex-col relative right-">
             
-        <div className="flex fixed w-screen h-24 border-[#97a590] z-10">
+        <div className="flex fixed bg-[#232323]/99 w-screen h-40 border-[#97a590] z-10">
 
 
 <VtckGrfx className="relative left-32 bottom-14 w-20 h-40 [&_path]:fill-current text-[#97a590] -rotate-7 opacity-10"/>

@@ -12,13 +12,13 @@ const graffs = [
 export default function Graffiti() {
 
     return (
-        <div className="grid grid-rows-2 gap-10 bg-blue-400 mt-10">
+        <div className="grid grid-rows-2 gap-10 bg-blue-400 mt-45">
         {graffs.map((graff, index) => {
             const GraffSvg = graff.svg
 
             return (
                 <div key={index}
-                    className="flex justify-center items-center w-40 h-40">
+                    className="flex relative justify-center items-center w-40 h-40">
 
         <div className="text-[#dcdcdc]">
             <GraffSvg
