@@ -1,5 +1,6 @@
 "use client"
 
+import { ToastContainer } from "react-toastify";
 import { usePathname } from "next/navigation";
 import SocialsNav from "@/components/SocialsNav";
 import "./globals.css";
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {!hideSocialsNav && <SocialsNav variant={variant}/>}
+        <ToastContainer/>
         {children}
       </body>
     </html>
