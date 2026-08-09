@@ -17,14 +17,12 @@ export default function TypographyNav() {
 
 <VtckGrfx className="relative left-32 bottom-14 w-20 h-40 [&_path]:fill-current text-[#97a590] -rotate-7 opacity-10"/>
 
-
-
-<div className="flex flex-col top-12 relative right-10 text-[#97a590] gap-2.5">
+<div className="flex flex-col top-12 relative text-[#97a590] gap-2.5">
 
 <button onClick={() => setIsOpen(!isOpen)}>
     <div className="h-5 w-15 bottom-0 flex relative rounded-t-[3px]">
             <p className={`${fugazOne.className} tracking-widest! text-[10px]! opacity-50!`}>
-        STYLES
+            STYLES
             </p>
     </div>
 </button>

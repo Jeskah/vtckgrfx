@@ -14,14 +14,22 @@ export default function WriteReviewsModal() {
     const [alreadyReviewed, setAlreadyReviewed] = useState(false);
     const [deviceId, setDeviceId] = useState("");
     const [state, formAction, pending] = useActionState(submitReview, {});
-
-            const handleOnClick = () => {
+    const [toast, setToast ] = useState(null);
+    
+    const handleOnClick = () => {
             if (alreadyReviewed) {
-                alert("You've already submitted a review");
+                setToast("You've already submitted a review!");
                 return;
-            }
-            setOpen(prev => !prev);
+            } setOpen(prev => !prev);
         }
+
+    useEffect(() => {
+        if(!toast) 
+    return;
+        const timeout = setTimeout(() => setToast(null), 2500);
+        return () => clearTimeout(timeout);
+    }, [toast]);
+
 
     useEffect(() => {
         let id = localStorage.getItem("review_device_id");
@@ -58,6 +66,11 @@ export default function WriteReviewsModal() {
                     onClick={handleOnClick}
                     className="text-sm underline uppercase text-center"/>
             </div>
+
+            {toast && (
+                <div className={`${fugazOne.className} text-white! flex flex-wrap text-center fixed h-fit w-60 bg-black p-3 text-[8px] uppercase rounded-[3px] justify-center animate-toast bottom-5 right-1 z-10`}
+                >{toast}</div>
+            )}
 
             {open && (
                 <div className="flex z-10 items-center justify-center bg-[#ffffff] opacity-99 w-screen fixed inset-0">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ReviewsFilter from "@/components/ReviewsFilter";
 import WriteReviewsModal from "@/components/WriteReviewModal";
+import DeleteReviewButton from "@/components/DeleteReviewButton";
 
 const PAGE_SIZE = 5;
 
@@ -73,7 +74,7 @@ export default async function ReviewsPage({ searchParams }) {
 
             <div className="flex flex-col gap-4 items-center justify-center mb-10 mt-10">
                 {reviews.map((review) => (
-                    <div key={review.id}>
+                    <div key={review.id} className="w-80 flex flex-col mb-2 relative items-center">
                         <div className="w-70 flex flex-col mb-2">
                             <h1 className={`${alegreyaSans.className} text-black! text-[15px]!`}>{review.name}</h1>
                             <p className="italic text-[10px]!">{review.work_type[0]}</p>
@@ -87,8 +88,10 @@ export default async function ReviewsPage({ searchParams }) {
 
                         <p className="italic">&quot;{review.review}&quot;</p>
                         </div>
+                                <DeleteReviewButton reviewId={review.id} reviewDeviceId={review.device_id}/>
                     </div>
                 ))}
+                
             </div>
             
         </div>
