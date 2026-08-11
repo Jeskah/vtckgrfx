@@ -32,7 +32,7 @@ export default function LogoGrid() {
     return (
 
         <>
-        <div className="grid grid-cols-[repeat(2,150px)] gap-3 w-fit items-start h-50 mt-5">
+        <div className="grid grid-cols-[repeat(2,150px)] w-fit items-start h-80 mt-5 gap-3">
             {visibleLogos.map((logo) => (
                 <button 
                     key={logo.src}
@@ -42,11 +42,11 @@ export default function LogoGrid() {
                 src={logo.src}
                 alt={logo.alt}
                 width={150}
-                height={150}/>
+                height={150}
+                className="rounded-[3px]"/>
                 </button>
             ))}
         </div>
-        {/* <div></div> */}
             {selectedLogo && (
             <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
             onClick={() => setSelectedLogo(null)}>
@@ -57,7 +57,7 @@ export default function LogoGrid() {
                         alt={selectedLogo.alt}
                         width={600}
                         height={600}
-                        className="max-w-[90vw] max-h-[90vh] object-contain"/>
+                        className="max-w-[90vw] max-h-[90vh] object-contain rounded-[5px]"/>
                 </div>
             </div>
         )}

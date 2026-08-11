@@ -13,17 +13,17 @@ export default function DesignPage() {
                 
                 <DesignCard image='/Amolith.png' alt='Amolith Logo Design Vatick' title='Logo design / branding' href='/designpage/logopage' objectPosition='10% 50%' transform='translateX(95px) translateY(0px) scale(1.2)'/>
 
-                <DesignCard image='/vatick-graff.jpg' alt='typeography custom Logo Design Vatick graffiti' title='Custom fonts / typography' href='/designpage/typographypage' objectPosition='10% 50%' transform='translateX(80px) translateY(24px) scale(1.9)'/>
+                <DesignCard image='/vatick-graff.png' alt='typeography custom Logo Design Vatick graffiti' title='Custom fonts / typography' href='/designpage/typographypage' objectPosition='10% 50%' transform='translateX(80px) translateY(20px) scale(1.7)'/>
 
 
 
-<div className="bg-black/10 w-80 rounded-[7px]">
-<div className="flex flex-col items-center gap-4 mt-15 mb-20">
+<div className="bg-black/10 w-80 rounded-[7px] mb-7">
+<div className="flex flex-col items-center gap-4 mt-10 mb-10">
     <Image src="/apps.svg" alt="app icon vatick" height={70} width={70}/>
 
-    <h2 className="text-black!"> Websites / Applications</h2>
+    <h2 className={`${alegreyaSans.className} text-black!`}> Websites / Applications</h2>
 
-<div className="flex flex-col w-60 h-15 overflow-hidden bg-black/80 text-center justify-center items-center rounded-[5px]">
+<div className="flex flex-col w-60 h-15 overflow-hidden bg-black/80 text-center justify-center items-center rounded-[5px] mt-5">
 
     <div className="flex flex-row gap-6 items-center">
         <Image src="/brand-nextjs.svg" alt="next js" width={26} height={26}/>
@@ -35,7 +35,7 @@ export default function DesignPage() {
     </div>
     </div>
 
-<div className="h-50 w-100 flex flex-col text-center items-center mb-20">
+<div className="h-50 w-100 flex flex-col text-center items-center mb-30">
     <Reviews/>
 
 </div>

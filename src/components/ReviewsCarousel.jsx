@@ -45,7 +45,7 @@ export default function ReviewsCarousel({ reviews }) {
 
             <div className='absolute top-290'>
                 <Link href="../designpage/reviewpage">
-                    <div className="flex flex-wrap p-2 rounded-sm w-25 justify-center bg-black/80 mt-13 z-10">
+                    <div className="flex flex-wrap p-2 rounded-sm w-25 justify-center bg-black/80 mt-10 z-10">
                 
                         <p className="p-1 uppercase font-black text-white! text-center text-[8px]!">see more</p>
                     </div>
