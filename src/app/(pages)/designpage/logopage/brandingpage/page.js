@@ -1,11 +1,20 @@
-
+import BrandNav from "@/components/BrandNav"
+import BrandingCard from "@/components/BrandingCard"
+import { brands } from "./brands"
 
 export default function Branding() {
+    const brand = brands[0]
+
     return (
         <>
-        <div className="flex justify-start text-left w-60">
-        <p className="text-black!">To be continued, watch this space</p>
-        </div>
+            <BrandNav/>
+                
+            <BrandingCard
+                title={brand.title}
+                description={brand.description}
+                hero={brand.hero}
+                gallery={brand.gallery}
+                />
         </>
     )
 }

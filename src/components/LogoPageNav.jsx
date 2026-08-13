@@ -7,7 +7,7 @@ export default function LogoPageNav() {
     const pathname = usePathname();
 
     const isLogos = pathname === '/designpage/logopage';
-    const isBranding = pathname === '/designpage/logopage/brandingpage'
+    const isBranding = pathname.startsWith('/designpage/logopage/brandingpage');
 
     return (
         <nav className="flex flex-col relative right-13">

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoGrid from "@/components/Logos";
-import { alegreyaSans } from "@/fonts";
 import { fugazOne } from "@/fonts";
 
 
@@ -16,9 +15,6 @@ export default function LogoPage() {
 
         </div>
 
-
-
-
             <div className="p-14 text-center bg-black h-fit gap-10 flex flex-col items-center w-80 rounded-t-[5px] mb-10">
 
             <Image src='/sketchtovector.svg' alt='' width={200} height={100}/>
@@ -29,7 +25,7 @@ export default function LogoPage() {
 
     </div>
 
-<div className="border-10 px-4 py-3 rounded-b-[5px] justify-center flex w-80 h-20 -mt-18 mb-10">
+<div className="border-10 px-4 py-3 rounded-b-[5px] justify-center flex w-80 h-20 -mt-1 mb-10">
         <button><h1 className={`${fugazOne.className} text-black! text-xs!`}>SEE PACKAGES</h1></button>
 </div>
     </div>
