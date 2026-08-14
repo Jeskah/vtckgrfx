@@ -7,16 +7,16 @@ import Arrow from "../../public/arrow.svg"
 const logos = [
 
     { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/FistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/chipli.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/Mestiza.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/Hilltops.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/RougeTimber.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/Logos/FistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     
 ];
 
 
-const PER_PAGE = 4;
+const PER_PAGE = 2;
 
 export default function LogoGrid() {
     const [selectedLogo, setSelectedLogo] = useState(null);
@@ -31,25 +31,47 @@ export default function LogoGrid() {
 
     return (
 
-        <div className="h-100 w-full relative mt-20">
-        <div className="grid grid-cols-[repeat(2,195px)] w-fit mt-5 items-start justify-center">
-            {visibleLogos.map((logo) => (
-                <button 
+        <div className="w-full relative mt-15">
+            <div className="flex flex-row justify-between items-center w-full z-10">
+                <div className="bg-black/80 rounded-r-[80px] p-3 flex absolute items-center justify-end bottom-55 left-0 w-8 z-10">
+
+                    <button type="button" onClick={goBack}>
+                        <Arrow 
+                        width={15} 
+                        height={15} 
+                        style={{fill: 'white', transform: 'scaleX(1)'}}/>
+                    </button>
+                </div>
+
+                <div className="bg-black/80 rounded-l-[80px] p-3 flex absolute items-center justify-start bottom-55 right-0 w-8">
+                    <button type="button" onClick={goForward}>
+                        
+                        <Arrow 
+                        width={15} 
+                        height={15} 
+                        style={{fill: 'white', transform: 'scaleX(-1)'}}/>
+                    </button>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-2 items-start justify-center">
+                {visibleLogos.map((logo) => (
+                    <button 
+                        key={logo.src}
+                        onClick={() => setSelectedLogo(logo)}>
+                    <Image
                     key={logo.src}
-                    onClick={() => setSelectedLogo(logo)}>
-                <Image
-                key={logo.src}
-                src={logo.src}
-                alt={logo.alt}
-                width={150}
-                height={150}
-                className="w-full"/>
-                </button>
-            ))}
-        </div>
-            {selectedLogo && (
-            <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-            onClick={() => setSelectedLogo(null)}>
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={150}
+                    height={150}
+                    className="w-full h-50 object-cover"/>
+                    </button>
+                ))}
+            </div>
+                {selectedLogo && (
+                <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+                onClick={() => setSelectedLogo(null)}>
                 
                 <div onClick={(e) => e.stopPropagation()}>
                     <Image 
@@ -61,29 +83,6 @@ export default function LogoGrid() {
                 </div>
             </div>
         )}
-
-            <div className="flex flex-row z-10">
-
-            <div className="bg-black/80 rounded-r-[80px] p-3 flex absolute items-center justify-end bottom-100 left-0 w-8">
-                <button type="button" onClick={goBack} className="relative">
-                    <Arrow 
-                    width={15} 
-                    height={15} 
-                    style={{fill: 'white', transform: 'scaleX(1)'}}/>
-                </button>
-            </div>
-
-            <div className="bg-black/80 rounded-l-[80px] p-3 flex absolute items-center justify-left bottom-100 right-0 w-8">
-                <button type="button" onClick={goForward} className="relative">
-                    
-                    <Arrow 
-                    width={15} 
-                    height={15} 
-                    style={{fill: 'white', transform: 'scaleX(-1)'}}/>
-                </button>
-            </div>
-
-            </div>
         </div>
     )
 }
