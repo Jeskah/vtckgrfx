@@ -31,8 +31,8 @@ export default function LogoGrid() {
 
     return (
 
-        <>
-        <div className="grid grid-cols-[repeat(2,150px)] w-fit items-start h-80 mt-5 gap-3">
+        <div className="h-100 w-screen">
+        <div className="grid grid-cols-[repeat(2,195px)] w-fit mt-5 items-start justify-center">
             {visibleLogos.map((logo) => (
                 <button 
                     key={logo.src}
@@ -43,7 +43,7 @@ export default function LogoGrid() {
                 alt={logo.alt}
                 width={150}
                 height={150}
-                className="rounded-[3px]"/>
+                className="w-full"/>
                 </button>
             ))}
         </div>
@@ -62,16 +62,21 @@ export default function LogoGrid() {
             </div>
         )}
 
-            <div className="flex z-10 gap-85 absolute bottom-104">
+            {/* <div className="flex flex-row z-10 gap-68 justify-center relative w-fit bottom-56">
 
-                <button onClick={goBack} className="relative top-14">
-                    <Arrow width={20} height={10} style={{ fill: 'black'}}/>
+            <div className="bg-black rounded-r-[80px] p-4">
+                <button onClick={goBack} className="relative">
+                    <Arrow width={20} height={20} style={{ fill: 'white'}}/>
                 </button>
-                <button onClick={goForward} className="relative top-14">
-                    <Arrow width={20} height={10} style={{fill: 'black', transform: 'scaleX(-1)'}}/>
-                </button>
-
             </div>
-        </>
+
+            <div className="bg-black items-center justify-center rounded-l-[100px] p-5">
+                <button onClick={goForward} className="relative">
+                    <Arrow width={20} height={20} style={{fill: 'white', transform: 'scaleX(-1)'}}/>
+                </button>
+            </div>
+
+            </div> */}
+        </div>
     )
 }

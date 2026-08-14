@@ -10,21 +10,21 @@ export default function LogoPageNav() {
     const isBranding = pathname.startsWith('/designpage/logopage/brandingpage');
 
     return (
-        <nav className="flex flex-col relative right-13">
+        <nav className="flex flex-col relative z-10 w-fit right-13">
 
             <Link href="/designpage/logopage" 
             className={ 
         isLogos
-            ? 'w-50 text-black font-black text-[18px] italic'
-            : ' font-black text-[15px] text-black/15!'}>
+            ? 'w-50 text-black font-black text-[15px] italic'
+            : ' font-black text-[15px] text-black/15! italic'}>
                 LOGOS
             </Link>
 
             <Link href="/designpage/logopage/brandingpage" 
             className={ 
         isBranding
-            ? 'w-50 text-black font-black text-[18px] italic'
-            : 'font-black text-[15px] text-black/15!' }>
+            ? 'w-50 text-black font-black text-[15px] italic'
+            : 'font-black text-[15px] text-black/15!  italic' }>
                 BRANDING
             </Link>
         </nav>

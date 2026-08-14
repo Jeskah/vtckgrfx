@@ -13,8 +13,17 @@ export const brands = [
 
             { src: "/Amolith.png", alt: "" },
 
+            { src: "/AmolithBranding/colors.jpg", alt: "" },
+
             { src: "/AmolithBranding/Amolith5.jpg", alt: "" },
             { src: "/AmolithBranding/Amolith1.jpg", alt: "" },
+
+            { src: "/AmolithBranding/Amolith5.jpg", alt: "" },
+
+            { src: "/AmolithBranding/Amolith8.jpg", alt: "", scale: 1.3, position: "40% 50%"},
+
+            { src: "/AmolithBranding/Amolith1.jpg", alt: "" },
+            { src: "/AmolithBranding/Amolith6.jpg", alt: "" },
         ],
     },
 

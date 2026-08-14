@@ -8,17 +8,15 @@ export default function BrandingCard({ title, description, hero, gallery }) {
 
     const firstRow = filledGallery.slice(0,2);
     const secondHero = filledGallery.slice(2,3);
-    const secondRow = filledGallery.slice(3,6)
+    const brandingColors = filledGallery.slice(3,4);
+    const thirdHero = filledGallery.slice(6,7);
+    const lastHero = filledGallery.slice(7,8);
+    const secondRow = filledGallery.slice(8,10);
 
     return (
         <div className="flex flex-col mb-20">
-
-        {/* <div className="flex flex-col text-center">
-            <h1 className={`${fugazOne.className} uppercase text-black! text-[16px]!`}>{title}</h1>
-        </div> */}
-
             {hero?.src && (
-                <div className="relative w-85 h-70 overflow-hidden flex items-center justify-center rounded-t-[10px] mt-4">
+                <div className="relative w-85 h-70 overflow-hidden flex items-center justify-center rounded-t-[10px]">
 
                     <Image
                     src={hero.src} 
@@ -69,18 +67,62 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-2 rounded-bl-[10px] rounded-br-[10px] overflow-hidden">
-                    {secondRow.map((img) => (
+                <div className="flex flex-col">
+                    {brandingColors.map((img) => (
+                        <Image
+                            key={img.src}
+                            src={img.src}
+                            alt={img.alt}
+                            width={500}
+                            height={500}
+                            
+                            className="w-full h-auto object-cover"
+                            />
+                    ))}
+                </div>
+
+                <div className="flex flex-col overflow-hidden">
+                    {thirdHero.map((img) => (
                         <Image 
                         key={img.src} 
                         src={img.src} 
                         alt={img.alt} 
                         width={200} 
                         height={200}
-                        className="h-full object-cover"
+                        className="h-auto w-full object-cover"
                         />
                     ))}
                 </div>
+
+                <div className="relative w-full h-80 overflow-hidden">
+
+                    <div className="bg-black/40 relative w-full h-full inset-0 z-1"/>
+                    {lastHero.map((img) => (
+                        <Image 
+                        key={img.src} 
+                        src={img.src} 
+                        alt={img.alt} 
+                        fill
+                        className="object-cover"
+                        style={{ objectPosition: img.position || "center", transform: `scale(${img.scale || 1})`, }}
+                        />
+                    ))}
+                </div>
+
+            <div className="grid grid-cols-2 rounded-bl-[10px] rounded-br-[10px] overflow-hidden">
+                {secondRow.map((img) => (
+                    <Image 
+                    key={img.src} 
+                    src={img.src} 
+                    alt={img.alt} 
+                    width={200} 
+                    height={200}
+                    className="w-full h-full object-cover"
+                    />
+                ))}
+                </div>
+
+                
             </div>
         </div>
     )
