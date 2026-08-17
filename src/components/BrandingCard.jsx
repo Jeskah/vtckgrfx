@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { fugazOne } from "@/fonts"
 import { alegreyaSans } from "@/fonts";
 
 export default function BrandingCard({ title, description, hero, gallery }) {
@@ -9,14 +8,30 @@ export default function BrandingCard({ title, description, hero, gallery }) {
     const firstRow = filledGallery.slice(0,2);
     const secondHero = filledGallery.slice(2,3);
     const brandingColors = filledGallery.slice(3,4);
-    const thirdHero = filledGallery.slice(6,7);
-    const lastHero = filledGallery.slice(7,8);
-    const secondRow = filledGallery.slice(8,10);
+    const thirdHero = filledGallery.slice(4,5);
+    const lastHero = filledGallery.slice(5,6);
+    const secondRow = filledGallery.slice(6,8);
 
     return (
         <div className="flex flex-col mb-20">
             {hero?.src && (
                 <div className="relative w-85 h-70 overflow-hidden flex items-center justify-center rounded-t-[10px]">
+
+                    {hero.type === "video" ? (
+                        <video
+                        src={hero.src}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                        style={{ 
+                            objectPosition: hero.position || "center",
+                            transform: `scale(${hero.scale || 1})`,
+                            transformOrigin: hero.position || "center",
+                            }} 
+                        />
+                    ) : (
 
                     <Image
                     src={hero.src} 
@@ -25,15 +40,25 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                     className="object-cover"
                     style={{ objectPosition: hero.position || "center"}}
                     />
+                    )
+                }
 
-                    <div className="absolute inset-0 bg-black/35"/>
+
+                    <div className="absolute inset-0"
+                        style={{ 
+                            backgroundColor: hero.overlayColor ?? "#000000",
+                            opacity: hero.overlayOpacity ?? 0.35, 
+                        }} 
+                    />
 
                     {Logo && (
                         <Logo
                         width={100}
                         height={100}
                             className="absolute z-10 w-auto h-40 top-13 [&_path]:fill-current text-white"
-
+                            style={{ 
+                                transform: `scale(${hero.logoScale || 1})`,
+                                top: hero.logoPosition}}
                         />
                         
                     )}
@@ -63,7 +88,13 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                         alt={img.alt} 
                         width={340} 
                         height={250}
-                        className="w-full h-auto object-cover"/>
+                        className="w-full h-auto object-cover"
+                        style={{
+                            transform: `scale(${img.scale || 1})`,
+                            objectPosition: img.position || "center"
+
+                        }}
+                        />
                     ))}
                 </div>
 
@@ -90,6 +121,11 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                         width={200} 
                         height={200}
                         className="h-auto w-full object-cover"
+                        style={{
+                            transform: `scale(${img.scale || 1})`,
+                            objectPosition: img.position || "center"
+
+                        }}
                         />
                     ))}
                 </div>
@@ -104,7 +140,9 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                         alt={img.alt} 
                         fill
                         className="object-cover"
-                        style={{ objectPosition: img.position || "center", transform: `scale(${img.scale || 1})`, }}
+                        style={{ 
+                            objectPosition: img.position || "center", 
+                            transform: `scale(${img.scale || 1})`, }}
                         />
                     ))}
                 </div>
