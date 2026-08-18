@@ -16,23 +16,23 @@ const logos = [
 ];
 
 
-const PER_PAGE = 2;
+const PER_PAGE = 3;
 
 export default function LogoGrid() {
     const [selectedLogo, setSelectedLogo] = useState(null);
     const [page, setPage] = useState(0);
-    const totalPages = Math.ceil(logos.length / PER_PAGE);
+    // const totalPages = Math.ceil(logos.length / PER_PAGE);
 
     const visibleLogos = logos.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
 
-    const goBack = () => setPage((p) => (p - 1 + totalPages) % totalPages);
-    const goForward = () => setPage((p) => (p + 1) % totalPages);
+    // const goBack = () => setPage((p) => (p - 1 + totalPages) % totalPages);
+    // const goForward = () => setPage((p) => (p + 1) % totalPages);
 
 
     return (
 
-        <div className="w-full relative mt-15">
-            <div className="flex flex-row justify-between items-center w-full z-10">
+        <div className="w-screen relative mt-10">
+            {/* <div className="flex flex-row justify-between items-center w-full z-10">
                 <div className="bg-black/80 rounded-r-[80px] p-3 flex absolute items-center justify-end bottom-55 left-0 w-8 z-10">
 
                     <button type="button" onClick={goBack}>
@@ -52,9 +52,9 @@ export default function LogoGrid() {
                         style={{fill: 'white', transform: 'scaleX(-1)'}}/>
                     </button>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-2 items-start justify-center">
+            <div className="grid grid-cols-1 justify-center items-center relative">
                 {visibleLogos.map((logo) => (
                     <button 
                         key={logo.src}
@@ -65,9 +65,11 @@ export default function LogoGrid() {
                     alt={logo.alt}
                     width={150}
                     height={150}
-                    className="w-full h-50 object-cover"/>
+                    className="w-screen h-80 object-cover"/>
                     </button>
                 ))}
+
+
             </div>
                 {selectedLogo && (
                 <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"

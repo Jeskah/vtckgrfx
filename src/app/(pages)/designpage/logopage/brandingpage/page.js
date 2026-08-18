@@ -6,8 +6,7 @@ export default function Branding() {
     const brand = brands[0]
 
     return (
-        <>
-            <BrandNav/>
+        <div>
                 
             <BrandingCard
                 title={brand.title}
@@ -15,6 +14,6 @@ export default function Branding() {
                 hero={brand.hero}
                 gallery={brand.gallery}
                 />
-        </>
+        </div>
     )
 }

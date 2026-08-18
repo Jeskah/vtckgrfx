@@ -13,7 +13,7 @@ export default function BrandingCard({ title, description, hero, gallery }) {
     const secondRow = filledGallery.slice(6,8);
 
     return (
-        <div className="flex flex-col mb-20">
+        <div className="flex flex-col mb-20 mt-10">
             {hero?.src && (
                 <div className="relative w-85 h-70 overflow-hidden flex items-center justify-center rounded-t-[10px]">
 

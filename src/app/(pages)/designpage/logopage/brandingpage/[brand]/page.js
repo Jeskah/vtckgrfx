@@ -8,8 +8,6 @@ export default async function Page({ params }) {
 
     return (
         <>
-        <BrandNav/>
-
         <BrandingCard
             title={brand.title}
             description={brand.description}

@@ -9,7 +9,9 @@ export default function BrandNav () {
     const pathname = usePathname();
 
     return (
-            <nav className="flex flex-row gap-3 py-2 uppercase text-[12px]! text-black! overflow-scroll whitespace-nowrap tracking-[-0.2] border-b-2 w-80 relative z-10">
+        <nav className="relative uppercase text-[10px]! text-white! overflow-scroll whitespace-nowrap tracking-[-0.2] w-80 rounded-r-[50px] rounded-l-[50px] z-10 bg-black mx-auto">
+
+                <div className="py-2 px-6 gap-7 flex flex-row">
 
         {brands.map((brand) => {
             const href = `/designpage/logopage/brandingpage/${brand.id}`;
@@ -19,12 +21,14 @@ export default function BrandNav () {
                 <Link 
                     key={brand.id}
                     href={href}
-                    className={isActive ? "font-black italic" : "text-black/20 font-black italic"}
+                    className={isActive ? "font-black italic" : "text-white/30 font-black italic"}
                 >
                     {brand.title}
                 </Link>
                 );
             })}
+            </div>
+
         </nav>
         );
 }

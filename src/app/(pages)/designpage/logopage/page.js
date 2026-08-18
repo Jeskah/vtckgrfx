@@ -5,10 +5,10 @@ import { fugazOne } from "@/fonts";
 
 
 
+
 export default function LogoPage() {
     return (
         <div className="flex flex-col items-center">
-
         <LogoGrid/>
 
 

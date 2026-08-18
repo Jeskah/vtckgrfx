@@ -44,13 +44,28 @@ export default function Typography() {
                 />
             </div>
 
-            <div className="flex flex-row justify-between gap-71 bottom-12 relative [&_path:fill-current] text-[#97a590] ">
+            <div className="flex flex-row justify-between gap-71 bottom-12 relative [&_path:fill-current] text-[#97a590]">
 
-                <button onClick={prev} className="flex justify-center items-center border-t-2 border-r-2 border-[#72455a] h-10 w-10 rounded-tr-[5px]">
-                    <Arrow src="/Arrow.svg" alt="arrow" width={8} height={8}/>
+                <button 
+                    onClick={prev} 
+                    className="flex justify-center items-center border-t-2 border-r-2 border-[#72455a] h-10 w-10 rounded-tr-[5px]">
+                    <Arrow 
+                        src="/Arrow.svg" 
+                        alt="arrow" 
+                        width={8} 
+                        height={8}
+                        style={{}}
+                        />
                 </button>
-                <button onClick={next} className="flex justify-center items-center border-t-2 border-l-2 border-[#78445C] h-10 w-10 rounded-tl-[5px]">
-                    <Arrow src="/Arrow.svg" alt="arrow" width={8} height={8} className="scale-x-[-1]"/>
+                <button 
+                    onClick={next} 
+                    className="flex justify-center items-center border-t-2 border-l-2 border-[#78445C] h-10 w-10 rounded-tl-[5px]">
+                    <Arrow 
+                    src="/Arrow.svg" 
+                    alt="arrow" 
+                    width={8} 
+                    height={8} 
+                    className="[&_path]:fill-current scale-x-[-1]"/>
                 </button>
             </div>
 

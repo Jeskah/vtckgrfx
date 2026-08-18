@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {!hideSocialsNav && <SocialsNav variant={variant}/>}
+        {/* {!hideSocialsNav && <SocialsNav variant={variant}/>} */}
         <ToastContainer/>
         {children}
       </body>

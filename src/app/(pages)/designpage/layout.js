@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import VtckGrfx from "@/components/VtckGrfx";
+import NavHeader from "@/components/NavHeader";
 
 
 export default function DesignLayout({ children }) {
@@ -11,8 +12,9 @@ export default function DesignLayout({ children }) {
 
     return (
         
-        <div className="bg-gray-100 min-h-screen flex flex-col items-center">
-                {!isTypography && <VtckGrfx/>}
+        <div className="bg-[#ffffff] min-h-screen flex flex-col items-center">
+            <NavHeader/>
+                {/* {!isTypography && <VtckGrfx/>} */}
                 {children} 
             </div>
     )
