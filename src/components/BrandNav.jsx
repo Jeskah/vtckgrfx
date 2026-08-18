@@ -40,7 +40,7 @@ export default function BrandNav () {
         <motion.nav
             layout
             transition={{ type: "spirng", stiffness: 200, damping: 500 }}
-            className={`relative text-white! rounded-r-[50px] rounded-l-[50px] z-10 bg-black ${isCollapsed ? "w-fit" : "w-full"}`}
+            className={`relative text-white! rounded-r-[50px] rounded-l-[50px] z-10 bg-black/95 ${isCollapsed ? "w-fit" : "w-full"}`}
             >
                 {isCollapsed ? (
                     <button 
@@ -72,7 +72,7 @@ export default function BrandNav () {
                 )}
 
                 {isOpen && isCollapsed && (
-                    <div className="absolute top-full left-0 w-full flex flex-col items-center bg-black rounded-[20px] mt-2 py-3 gap-2">
+                    <div className="absolute top-full left-0 w-full flex flex-col items-center bg-black/90 rounded-[20px] mt-2 py-3 gap-2">
                         {brands.map((brand) => (
                             <Link
                                 key={brand.id}
