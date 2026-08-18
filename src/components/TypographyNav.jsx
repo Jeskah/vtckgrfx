@@ -15,7 +15,7 @@ export default function TypographyNav() {
         <div className="flex fixed bg-[#232323]/99 w-screen h-40 border-[#97a590] z-10">
 
 
-<VtckGrfx className="relative left-32 bottom-14 w-20 h-40 [&_path]:fill-current text-[#97a590] -rotate-7 opacity-10"/>
+<VtckGrfx className="relative left-12 bottom-14 w-20 h-40 [&_path]:fill-current text-[#97a590] -rotate-7 opacity-10"/>
 
 <div className="flex flex-col top-12 relative text-[#97a590] gap-2.5">
 

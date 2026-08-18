@@ -11,7 +11,7 @@ return (
       <h2 className={`${fugazOne.className} uppercase bottom-3 justify-center items-center flex fixed text-[12px]! `}>www.vatick.co.uk</h2>
 
 
-    <div className="flex flex-col absolute inset-0 gap-15 justify-center items-center z-10">
+    <div className="flex flex-col relative top-70 inset-0 gap-15 justify-center items-center z-10">
       <NavButton href="/designpage" label="DESIGN"/>
       <NavButton href="/soundpage" label="SOUND"/>
     </div>

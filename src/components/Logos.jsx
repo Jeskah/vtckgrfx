@@ -31,7 +31,7 @@ export default function LogoGrid() {
 
     return (
 
-        <div className="w-screen relative mt-10">
+        <div className="w-screen relative">
             {/* <div className="flex flex-row justify-between items-center w-full z-10">
                 <div className="bg-black/80 rounded-r-[80px] p-3 flex absolute items-center justify-end bottom-55 left-0 w-8 z-10">
 
