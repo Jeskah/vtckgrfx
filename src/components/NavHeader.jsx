@@ -15,7 +15,7 @@ export default function NavHeader() {
 
     return (
         <div className="flex flex-col w-screen sticky top-0 z-20 gap-5">
-            <div className="flex flex-col bg-white/98">
+            <div id="nav-header-core" className="flex flex-col bg-white/98">
             <VtchGrfx/>
             <SocialsNav/>
             {isLogoSection && <LogoPageNav/>}

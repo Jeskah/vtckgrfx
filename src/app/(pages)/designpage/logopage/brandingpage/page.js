@@ -7,7 +7,7 @@ export default function Branding() {
 
     return (
         <div>
-                
+            <div id="branding-card-top"/>
             <BrandingCard
                 title={brand.title}
                 description={brand.description}

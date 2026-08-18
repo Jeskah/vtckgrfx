@@ -1,6 +1,6 @@
 import { brands } from "../brands";
 import BrandingCard from "@/components/BrandingCard";
-import BrandNav from "@/components/BrandNav";
+
 
 export default async function Page({ params }) {
     const { brand: brandId } = await params;
@@ -8,6 +8,7 @@ export default async function Page({ params }) {
 
     return (
         <>
+        <div id="branding-card-top"/>
         <BrandingCard
             title={brand.title}
             description={brand.description}
