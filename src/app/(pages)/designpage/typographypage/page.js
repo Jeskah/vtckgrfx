@@ -6,7 +6,7 @@ export default function TypographyPage () {
 
     return (
         <>        
-            <div className="flex flex-col w-screen items-center min-h-screen absolute gap-5">
+            <div className="flex flex-col w-screen items-center min-h-screen absolute gap-5 mt-10">
 
                 <div className="relative border-2 border-[#78445C] rounded-t-[10px] w-92 h-18 mt-40">
 
