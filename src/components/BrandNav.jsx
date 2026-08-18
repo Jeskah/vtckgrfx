@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 import { brands } from "@/app/(pages)/designpage/logopage/brandingpage/brands";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { fugazOne } from "@/fonts";
 
-const pillText = "uppercase text-[10px]! tracking-[-0.2] font-black"
+const pillText = `${fugazOne.className} uppercase text-[10px]! tracking-[-0.2] font-black`
 
 export default function BrandNav () {
     const pathname = usePathname();
@@ -38,15 +39,15 @@ export default function BrandNav () {
         <div className="w-75 mx-auto">
         <motion.nav
             layout
-            transition={{ type: "spirng", stiffness: 100, damping: 100 }}
-            className={`relative text-white! rounded-r-[50px] rounded-l-[50px] z-10 bg-black overflow-hidden ${isCollapsed ? "w-fit" : "w-full"}`}
+            transition={{ type: "spirng", stiffness: 200, damping: 500 }}
+            className={`relative text-white! rounded-r-[50px] rounded-l-[50px] z-10 bg-black ${isCollapsed ? "w-fit" : "w-full"}`}
             >
                 {isCollapsed ? (
                     <button 
                         onClick={() => setIsOpen((open) => !open)}
                         className={`flex flex-row items-center gap-2 py-3 px-6 whitespace-nowrap ${pillText}`}>
 
-                            <span className="text-[10px]!">{activeBrand.title}</span>
+                            <span className={`${pillText} text-white!`}>{activeBrand.title}</span>
                             <span className={`transition-transform ${isOpen ? "rotate-180!" : ""}`}>
                         ⏷
                             </span>
@@ -76,6 +77,8 @@ export default function BrandNav () {
                             <Link
                                 key={brand.id}
                                 href={`/designpage/logopage/brandingpage/${brand.id}`}
+                                className={`${pillText} ${brand.id === activeBrand.id ? "text-white!" : "text-white/30!"}`}
+                                
                                 >
                                     {brand.title}
                                 </Link>
