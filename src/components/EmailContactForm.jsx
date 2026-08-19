@@ -33,7 +33,7 @@ export default function EmailContactForm({ onClose }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col relative">
+        <form onSubmit={handleSubmit} className="flex flex-col relative z-50">
 
             <div className="flex flex-col items-center text-center gap-8 absolute w-full">
 

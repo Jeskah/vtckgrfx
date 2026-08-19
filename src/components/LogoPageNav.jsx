@@ -10,7 +10,7 @@ export default function LogoPageNav() {
     const isBranding = pathname.startsWith('/designpage/logopage/brandingpage');
 
     return (
-        <nav className="flex flex-row z-50 justify-center relative mb-5">
+        <nav className="flex flex-row z-40 justify-center relative mb-5">
 
 <div className="flex flex-row w-40 justify-center">
 

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Arrow from "../../public/arrow.svg"
 
 const logos = [
-    { src: "/Logos/FistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/fistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/chipli.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/Hilltops.jpg", alt:"vatcik, logos, design, vtckgrfx"},
@@ -62,8 +62,9 @@ export default function LogoGrid() {
                     key={logo.src}
                     src={logo.src}
                     alt={logo.alt}
-                    width={150}
-                    height={150}
+                    width={1000}
+                    height={1000}
+                    quality={100}
                     className="w-screen h-80 object-cover"/>
                     </button>
                 ))}

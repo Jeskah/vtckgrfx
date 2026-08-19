@@ -13,7 +13,7 @@ export default function DesignPage() {
                 
                 <DesignCard image='/Amolith.png' alt='Amolith Logo Design Vatick' title='Logo design / branding' href='/designpage/logopage' objectPosition='10% 50%' transform='translateX(95px) translateY(0px) scale(1.2)'/>
 
-                <DesignCard image='/vatick-graff.png' alt='typeography custom Logo Design Vatick graffiti' title='Custom fonts / typography' href='/designpage/typographypage' objectPosition='10% 50%' transform='translateX(80px) translateY(20px) scale(1.7)'/>
+                <DesignCard image='/vatick-graff.jpg' alt='typeography custom Logo Design Vatick graffiti' title='Custom fonts / typography' href='/designpage/typographypage' objectPosition='10% 50%' transform='translateX(80px) translateY(20px) scale(1.7) rotate(4deg)'/>
 
 
 
