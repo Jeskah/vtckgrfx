@@ -7,9 +7,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fugazOne } from "@/fonts";
 
-const pillText = `${fugazOne.className} uppercase text-[10px]! tracking-[-0.2] font-black`
+const pillText = `${fugazOne.className} uppercase text-[10px]! tracking-[0.2]`
 
 export default function BrandNav () {
+
     const pathname = usePathname();
     const [ isCollapsed, setIsCollapsed ] = useState(false);
     const [ isOpen, setIsOpen ] = useState(false);
@@ -34,6 +35,13 @@ export default function BrandNav () {
         observer.observe(target);
         return () => observer.disconnect();
     }, [pathname]);
+    
+
+const [prevPathname, setPrevPathname] = useState(pathname);
+if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setIsOpen(false);
+}
 
     return (
         <div className="w-75 mx-auto">

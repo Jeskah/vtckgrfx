@@ -5,12 +5,11 @@ import Image from "next/image";
 import Arrow from "../../public/arrow.svg"
 
 const logos = [
-
-    { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/FistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/chipli.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/Logos/Mestiza.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/Hilltops.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/Mestiza.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/RougeTimber.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     
 ];
@@ -21,38 +20,38 @@ const PER_PAGE = 3;
 export default function LogoGrid() {
     const [selectedLogo, setSelectedLogo] = useState(null);
     const [page, setPage] = useState(0);
-    // const totalPages = Math.ceil(logos.length / PER_PAGE);
+    const totalPages = Math.ceil(logos.length / PER_PAGE);
 
     const visibleLogos = logos.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
 
-    // const goBack = () => setPage((p) => (p - 1 + totalPages) % totalPages);
-    // const goForward = () => setPage((p) => (p + 1) % totalPages);
+    const goBack = () => setPage((p) => (p - 1 + totalPages) % totalPages);
+    const goForward = () => setPage((p) => (p + 1) % totalPages);
 
 
     return (
 
         <div className="w-screen relative">
-            {/* <div className="flex flex-row justify-between items-center w-full z-10">
-                <div className="bg-black/80 rounded-r-[80px] p-3 flex absolute items-center justify-end bottom-55 left-0 w-8 z-10">
+            <div className="flex flex-row justify-between items-center w-full fixed z-50 bottom-10">
+                <div className="bg-black/80 rounded-r-[80px] p-5 flex items-center justify-end left-0 w-15">
 
                     <button type="button" onClick={goBack}>
                         <Arrow 
-                        width={15} 
-                        height={15} 
+                        width={20} 
+                        height={20} 
                         style={{fill: 'white', transform: 'scaleX(1)'}}/>
                     </button>
                 </div>
 
-                <div className="bg-black/80 rounded-l-[80px] p-3 flex absolute items-center justify-start bottom-55 right-0 w-8">
+                <div className="bg-black/80 rounded-l-[80px] p-5 flex absolute items-center justify-start right-0 w-15">
                     <button type="button" onClick={goForward}>
                         
                         <Arrow 
-                        width={15} 
-                        height={15} 
+                        width={20} 
+                        height={20} 
                         style={{fill: 'white', transform: 'scaleX(-1)'}}/>
                     </button>
                 </div>
-            </div> */}
+            </div>
 
             <div className="grid grid-cols-1 justify-center items-center relative">
                 {visibleLogos.map((logo) => (

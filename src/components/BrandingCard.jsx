@@ -82,6 +82,7 @@ export default function BrandingCard({ title, description, hero, gallery }) {
 
                 <div className="flex flex-col">
                     {secondHero.map((img) => (
+                        <div key={img.src} className="relative w-full">
                         <Image 
                         key={img.src}
                         src={img.src}
@@ -92,9 +93,14 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                         style={{
                             transform: `scale(${img.scale || 1})`,
                             objectPosition: img.position || "center"
-
                         }}
                         />
+                        <div className="absolute inset-0"
+                        style={{
+                            backgroundColor: img.overlayColor ?? "#000000",
+                            opacity: img.overlayOpacity ?? 0,
+                        }}/>
+                        </div>
                     ))}
                 </div>
 
@@ -114,6 +120,7 @@ export default function BrandingCard({ title, description, hero, gallery }) {
 
                 <div className="flex flex-col overflow-hidden">
                     {thirdHero.map((img) => (
+                        <div key={img.src} className="relative w-full">
                         <Image 
                         key={img.src} 
                         src={img.src} 
@@ -123,10 +130,15 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                         className="h-auto w-full object-cover"
                         style={{
                             transform: `scale(${img.scale || 1})`,
-                            objectPosition: img.position || "center"
-
+                            objectPosition: img.position || "center",
                         }}
                         />
+                        <div className="absolute inset-0"
+                            style={{
+                                backgroundColor: img.overlayColor ?? "#000000",
+                                opacity: img.overlayOpacity ?? 0,
+                            }}/>
+                        </div>
                     ))}
                 </div>
 
@@ -134,6 +146,7 @@ export default function BrandingCard({ title, description, hero, gallery }) {
 
                     <div className="bg-black/40 relative w-full h-full inset-0 z-1"/>
                     {lastHero.map((img) => (
+                        <div key={img.src} className="absolute inset-0">
                         <Image 
                         key={img.src} 
                         src={img.src} 
@@ -142,8 +155,15 @@ export default function BrandingCard({ title, description, hero, gallery }) {
                         className="object-cover"
                         style={{ 
                             objectPosition: img.position || "center", 
-                            transform: `scale(${img.scale || 1})`, }}
+                            transform: `scale(${img.scale || 1})`, 
+                            }}
                         />
+                        <div className="absolute inset-0"
+                        style={{
+                            backgroundColor: img.overlayColor ?? "#000000",
+                            opacity: img.overlayOpacity ?? 0,
+                        }}/>
+                        </div>
                     ))}
                 </div>
 

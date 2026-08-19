@@ -57,20 +57,31 @@ export const brands = [
             { src: "/FistedPunkBranding/FistedPunk2.jpg", alt: "" },
 
             //hero 1
-            { src: "/FistedPunkBranding/FistedPunkRecordRed.jpg", alt: ""},,
+            { src: "/FistedPunkBranding/tshirt1.jpg", alt: "" },
 
             //brand colours
             { src: "/FistedPunkBranding/ColorPallet.jpg", alt: "" },
 
             //second hero
-            { src: "/FistedPunkBranding/FistedPunkRecordRed.jpg", alt: "", scale: 1.2, position: "130%" },
+            { src: "/FistedPunkBranding/FistedPunkRecordRed.jpg", 
+                alt: "", 
+                scale: 1.6, 
+                position: "100%",
+                overlayOpacity: 0.7,
+                overlayColor: "#37353f" },
+
 
             //last hero
-            { src: "/FistedPunkBranding/FistedPunkRecordRed.jpg", alt: "", scale: 1.4, position: "130%" },
+            { src: "/FistedPunkBranding/FistedPunkRecordRed.jpg", 
+                    alt: "", 
+                    scale: 1.4, 
+                    position: "130%",
+                    overlayOpacity: 0.3,
+                    overlayColor: "#37353f" },
 
             //last row
-            { src: "/FistedPunkBranding/tshirt3.jpg", alt: "" },
-            { src: "/FistedPunkBranding/tshirt3.jpg", alt: "" },
+            { src: "/FistedPunkBranding/tshirt1.jpg", alt: "" },
+            { src: "/FistedPunkBranding/tshirt2.jpg", alt: "" },
         ],
     },
 
