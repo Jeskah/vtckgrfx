@@ -12,7 +12,7 @@ export default function LogoPage() {
         <LogoGrid/>
 
 
-<div className="flex flex-col p-14 text-center bg-white/98 h-fit mb-15 w-screen gap-1 relative">
+<div className="flex flex-col p-14 text-center bg-white/98 mb-15 w-screen relative">
 
 <div className="flex flex-wrap justify-center gap-15">
 

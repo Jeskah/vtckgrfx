@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import Arrow from "../../public/arrow.svg"
+import { fugazOne } from "@/fonts";
+import { alegreyaSans } from "@/fonts";
 
 const logos = [
-    { src: "/Logos/fistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx"},
-    { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx"},
+    { src: "/Logos/fistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx", name:"Fisted Punk", description:"Fisted Punk record label supporting underground dance music events and supporting artist releases"},
+    { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx", name:"If These Walls Could Talk", description:"Youtube podcast channel inviting people in their field of expertise to talk about their profession"},
     { src: "/Logos/chipli.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/Hilltops.jpg", alt:"vatcik, logos, design, vtckgrfx"},
     { src: "/Logos/Mestiza.jpg", alt:"vatcik, logos, design, vtckgrfx"},
@@ -15,7 +17,7 @@ const logos = [
 ];
 
 
-const PER_PAGE = 3;
+const PER_PAGE = 1;
 
 export default function LogoGrid() {
     const [selectedLogo, setSelectedLogo] = useState(null);
@@ -30,31 +32,11 @@ export default function LogoGrid() {
 
     return (
 
-        <div className="w-screen relative">
-            <div className="flex flex-row justify-between items-center w-full fixed z-50 bottom-10">
-                <div className="bg-black/80 rounded-r-[80px] p-5 flex items-center justify-end left-0 w-15">
+        <div className="w-screen h-screen overflow-hidden relative gap-10 mt-10 flex flex-col">
 
-                    <button type="button" onClick={goBack}>
-                        <Arrow 
-                        width={20} 
-                        height={20} 
-                        style={{fill: 'white', transform: 'scaleX(1)'}}/>
-                    </button>
-                </div>
-
-                <div className="bg-black/80 rounded-l-[80px] p-5 flex absolute items-center justify-start right-0 w-15">
-                    <button type="button" onClick={goForward}>
-                        
-                        <Arrow 
-                        width={20} 
-                        height={20} 
-                        style={{fill: 'white', transform: 'scaleX(-1)'}}/>
-                    </button>
-                </div>
-            </div>
-
-            <div className="grid grid-cols-1 justify-center items-center relative">
+            <div className="grid grid-cols-1/2 justify-center items-center relative">
                 {visibleLogos.map((logo) => (
+                    <div key={logo.src} className="flex flex-col items-center gap-10 text-center">
                     <button 
                         key={logo.src}
                         onClick={() => setSelectedLogo(logo)}>
@@ -65,10 +47,22 @@ export default function LogoGrid() {
                     width={1000}
                     height={1000}
                     quality={100}
-                    className="w-screen h-80 object-cover"/>
+                    className="w-90 h-90 object-cover rounded-[10px]"/>
                     </button>
+
+                    <div className="relative gap-6 flex flex-col items-center">
+                        {logo.name && (
+                            <h1 className={`${alegreyaSans.className} font-black! tracking-[1px] uppercase text-black!`}>{logo.name}</h1>
+                        )}
+
+                        {logo.description && (
+                            <p className={`${alegreyaSans.className} w-70`}>{logo.description}</p>
+                        )}
+                    </div>
+                    </div>
                 ))}
 
+                
 
             </div>
                 {selectedLogo && (
@@ -84,7 +78,32 @@ export default function LogoGrid() {
                         className="max-w-[90vw] max-h-[90vh] object-contain rounded-[5px]"/>
                 </div>
             </div>
+
+            
         )}
+
+                <div className="absolute bottom-88 left-1/2 -translate-x-1/2 flex flex-row items-center gap-60">
+
+                <div className="bg-black/0 rounded-[5px] p-4 flex">
+
+                    <button type="button" onClick={goBack}>
+                        <Arrow 
+                        width={20} 
+                        height={20} 
+                        style={{fill: 'black', transform: 'scaleX(1)'}}/>
+                    </button>
+                </div>
+
+                <div className="bg-black/0 rounded-[5px] p-4 flex">
+                    <button type="button" onClick={goForward}>
+                        
+                        <Arrow 
+                        width={20} 
+                        height={20} 
+                        style={{fill: 'black', transform: 'scaleX(-1)'}}/>
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

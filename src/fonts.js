@@ -8,7 +8,7 @@ export const rajdhani = Rajdhani({
 
 export const alegreyaSans = Alegreya_Sans({
     subests: ["latin"],
-    weight: ["300", "400","500", "700"],
+    weight: ["100", "300", "400", "500", "700", "800", "900"],
     variable: "--font-alegreyaSans",
 });
 
