@@ -49,7 +49,7 @@ export const brands = [
             position: "60% 35%",
             logoPosition: "16%",
             scale: 1.5,
-            overlayOpacity: 0.5,
+            overlayOpacity: 0.3,
             overlayColor: "#37353f"},
         gallery: [
             //colour logo examples 1 & 2 as row
@@ -62,21 +62,21 @@ export const brands = [
             //brand colours
             { src: "/FistedPunkBranding/ColorPallet.jpg", alt: "" },
 
-            //second hero
+            //hero 2
             { src: "/FistedPunkBranding/FistedPunkRecordRed.jpg", 
                 alt: "", 
-                scale: 1.6, 
-                position: "100%",
-                overlayOpacity: 0.7,
-                overlayColor: "#37353f" },
+                scale: 1.2, 
+                position: "130%",
+                overlayOpacity: 0.5,
+                overlayColor: "#000000" },
 
 
             //last hero
-            { src: "/FistedPunkBranding/FistedPunkRecordRed.jpg", 
+            { src: "/FistedPunkBranding/tshirt3.jpg", 
                     alt: "", 
-                    scale: 1.4, 
+                    scale: 1.5, 
                     position: "130%",
-                    overlayOpacity: 0.3,
+                    overlayOpacity: 0,
                     overlayColor: "#37353f" },
 
             //last row

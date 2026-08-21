@@ -33,7 +33,7 @@ export default function Typography() {
     return (
         <div className="flex flex-col items-center w-full gap-2">
 
-            <div className="h-80 flex items-center justify-center border-2 border-[#78445C] w-92 text-[#97a590]! ">
+            <div className="h-80 flex items-center justify-center border-2 border-[#78445C] w-85 bg-white/2 text-[#97a590]! ">
                 
                 <CurrentSvg
                     key={index}
@@ -44,11 +44,11 @@ export default function Typography() {
                 />
             </div>
 
-            <div className="flex flex-row justify-between gap-71 bottom-12 relative [&_path:fill-current] text-[#97a590]">
+            <div className="flex flex-row justify-between gap-65 bottom-12 relative [&_path:fill-current] text-[#97a590]">
 
                 <button 
                     onClick={prev} 
-                    className="flex justify-center items-center border-t-2 border-r-2 border-[#72455a] h-10 w-10 rounded-tr-[5px]">
+                    className="flex justify-center items-center border-t-2 border-r-2 border-[#72455a] h-10 w-10 rounded-tr-[5px] bg-black/10">
                     <Arrow 
                         src="/Arrow.svg" 
                         alt="arrow" 
@@ -59,7 +59,7 @@ export default function Typography() {
                 </button>
                 <button 
                     onClick={next} 
-                    className="flex justify-center items-center border-t-2 border-l-2 border-[#78445C] h-10 w-10 rounded-tl-[5px]">
+                    className="flex justify-center items-center border-t-2 border-l-2 border-[#78445C] h-10 w-10 rounded-tl-[5px] bg-black/10">
                     <Arrow 
                     src="/Arrow.svg" 
                     alt="arrow" 
@@ -69,7 +69,7 @@ export default function Typography() {
                 </button>
             </div>
 
-            <div className="border-2 border-[#78445C] rounded-b-[7px] h-25 w-92 flex relative -mt-9">
+            <div className="border-2 border-[#78445C] rounded-b-[7px] h-20 w-85 flex relative -mt-9">
 
                 <h1 className={`${fugazOne.className} text-[8px]! uppercase w-90 p-3 leading-4 text-[#97a590]! opacity-30`}>
             {current.description}
