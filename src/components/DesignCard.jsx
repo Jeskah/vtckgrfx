@@ -21,7 +21,7 @@ export default function DesignCard({ image, alt, title, href, objectPosition, tr
 
         <div className="absolute inset-0 z-10"/>
         
-        <div className="flex flex-col justify-end p-5 absolute z-20 w-38 bg-white top-0 left-0 h-full">
+        <div className="flex flex-col justify-end p-5 absolute z-20 w-38 bg-[#ededed] top-0 left-0 h-full">
             <h2 className={`${alegreyaSans.className} text-black! leading-4 text-wrap`}>{title}</h2>
         </div>
 

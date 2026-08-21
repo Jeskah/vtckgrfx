@@ -9,7 +9,7 @@ import XIcon from "@public/x.svg"
 
 export default function DesignPage() {
     return (
-            <div className="flex flex-col uppercase items-center gap-10 ">
+            <div className="flex flex-col uppercase items-center gap-10 mt-5">
                 
                 <DesignCard image='/Amolith.png' alt='Amolith Logo Design Vatick' title='Logo design / branding' href='/designpage/logopage' objectPosition='10% 50%' transform='translateX(95px) translateY(0px) scale(1.2)'/>
 
@@ -17,7 +17,7 @@ export default function DesignPage() {
 
 
 
-<div className="bg-black/10 w-80 rounded-[7px] mb-7">
+<div className="bg-[#ededed] w-80 rounded-[7px] mb-7">
 <div className="flex flex-col items-center gap-4 mt-10 mb-10">
     <Image src="/apps.svg" alt="app icon vatick" height={70} width={70}/>
 

@@ -34,7 +34,7 @@ export default function ReviewsCarousel({ reviews }) {
 
             <StarRating rating={r.rating}/>
 
-            <p className='line-clamp-3 px-8 normal-case mt-4 w-69'>{r.review}</p>
+            <p className='line-clamp-3 px-8 normal-case mt-4 w-60'>{r.review}</p>
             
 
             <div className='flex flex-row relative px-20 opacity-15 items-center'>
@@ -43,7 +43,7 @@ export default function ReviewsCarousel({ reviews }) {
                 <Image src='/quote.svg' alt='vtck quote reviews' height={25} width={25} style={{transform: 'scaleX(-1)'}} className='absolute -top-5 -right-16'></Image>
             </div>
 
-            <div className='absolute top-290'>
+            <div className='absolute top-295'>
                 <Link href="../designpage/reviewpage">
                     <div className="flex flex-wrap p-2 rounded-sm w-25 justify-center bg-black/80 mt-10 z-10">
                 
