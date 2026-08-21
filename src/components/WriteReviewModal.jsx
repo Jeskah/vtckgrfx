@@ -57,7 +57,7 @@ export default function WriteReviewsModal() {
             
             <div className="flex flex-col relative">
 
-            <div className="w-10 h-15 rounded-r-[3px] align-center flex flex-wrap bg-black z-20 items-center justify-center left-0 top-60 fixed ">
+            <div className="w-10 h-15 rounded-r-[3px] align-center flex flex-wrap bg-black z-100 items-center justify-center left-0 top-60 fixed ">
                 <Image 
                     src="/write-review.svg" 
                     alt="" 
@@ -73,7 +73,7 @@ export default function WriteReviewsModal() {
             )}
 
             {open && (
-                <div className="flex z-10 items-center justify-center bg-[#ffffff] opacity-99 w-screen fixed inset-0">
+                <div className="flex z-50 items-center justify-center bg-[#ffffff] opacity-99 w-screen h-screen fixed inset-0">
                     <form action={formAction}>
                         <input type="hidden" name="device_id" value={deviceId} />
                         
