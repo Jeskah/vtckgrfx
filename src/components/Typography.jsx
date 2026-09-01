@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { fugazOne } from "@/fonts";
+import { alegreyaSans } from "@/fonts";
 import AmolithType from "@public/Amolith-Type.svg"
 import MovingSpooky from "@public/MovingSpooky.svg"
 import Tahili from "@public/Tahili.svg"
@@ -27,7 +27,7 @@ export default function Typography() {
     const CurrentSvg = current.svg;
 
     return (
-        <div className="flex flex-col items-center w-full bottom-70 absolute">
+        <div className="flex flex-col items-center w-full relative mt-40">
 
             <div className="flex items-center justify-center text-black ">
                 
@@ -65,13 +65,13 @@ export default function Typography() {
                 </button>
             </div>
 
-            {/* <div className="h-20 w-85 flex relative -mt-9 items-center justify-center">
+            <div className="h-20 w-85 flex relative items-center justify-center mt-20">
 
                 <h1 className={`${alegreyaSans.className} text-[12px]! uppercase w-80 p-3 leading-4  text-black! text-center`}>
             {current.description}
                 </h1>
 
-            </div> */}
+            </div>
 
         </div>
 

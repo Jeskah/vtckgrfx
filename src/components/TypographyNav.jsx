@@ -11,7 +11,9 @@ export default function TypographyNav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex flex-col border-b-3 h-fit w-screen z-50 sticky top-0 bg-black">
+
+
+<div className="flex flex-col border-b-3 h-fit w-full z-50 sticky top-0 bg-black">
             
 
 
@@ -52,7 +54,9 @@ export default function TypographyNav() {
 
 </div>
 
+<div className="absolute top-full w-full">
 {isOpen && <TypographyStylesNav/>}
+</div>
 
      </div>
 

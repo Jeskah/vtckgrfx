@@ -7,7 +7,7 @@ import { fugazOne } from "@/fonts";
 import { alegreyaSans } from "@/fonts";
 
 const logos = [
-    { src: "/Logos/fistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx", name:"Fisted Punk", description:"Fisted Punk record label supporting underground dance music events and supporting artist releases"},
+    { src: "/Logos/FistedPunk.jpg", alt:"vatcik, logos, design, vtckgrfx", name:"Fisted Punk", description:"Fisted Punk record label supporting underground dance music events and supporting artist releases"},
     { src: "/Logos/itwct.jpg", alt:"vatcik, logos, design, vtckgrfx", name:"If These Walls Could Talk", description:"Youtube podcast channel inviting people in their field of expertise to talk about their profession"},
     { src: "/Logos/RougeTimber.jpg", alt:"vatcik, logos, design, vtckgrfx", name:"Rogue Timber", description:"Rogue Timber upcycles old furniture with high grade timber, neededing a brand mark that would translate well for a branding iron"},
     { src: "/Logos/chipli.jpg", alt:"vatcik, logos, design, vtckgrfx", name: "Chipli", description:"Logo icon for a transport app, similar to uber designed to use on a map to locate available rides"},

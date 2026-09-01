@@ -5,14 +5,14 @@ import VatickBlocky from "@public/VATICKBLOCKY.svg"
 const graffs = [
     { svg: VatickGraffThin, scale: 1 },
     { svg: Ick, scale: 1 },
-    { svg: VatickBlocky, scale: 1.2 },
+
 ];
 
 
 export default function Graffiti() {
 
     return (
-        <div className="grid grid-rows-2 gap-10 bg-blue-400 mt-45">
+        <div className="grid grid-rows-2 gap-10 mt-20">
         {graffs.map((graff, index) => {
             const GraffSvg = graff.svg
 
@@ -20,7 +20,7 @@ export default function Graffiti() {
                 <div key={index}
                     className="flex relative justify-center items-center w-40 h-40">
 
-        <div className="text-[#dcdcdc]">
+        <div className="text-black">
             <GraffSvg
             width={100}
             height={100}
