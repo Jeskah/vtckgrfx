@@ -15,7 +15,7 @@ export default function TypographyNav() {
             
 
 
-<div className="relative left-2/7 z-20">
+<div className="relative left-2/7 z-20 w-fit">
 <VtckGrfx className="flex w-15 [&_path]:fill-current text-white"/>
 </div>
 
