@@ -10,19 +10,19 @@ export default function TypographyNav() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex bg-[#232323] w-screen z-10 flex-col relative">
+        <div className="flex flex-col border-b-3 h-fit w-screen z-50 sticky top-0 bg-black">
             
-        <div className="flex fixed bg-[#232323]/99 w-screen h-20 border-[#97a590] z-20">
 
-<div className="relative left-60 bottom-31 opacity-20 z-40">
-<VtckGrfx className="w-15 h-60 [&_path]:fill-current text-[#97a590]"/>
+
+<div className="relative bottom-1/4 left-2/7 z-20">
+<VtckGrfx className="flex w-14 [&_path]:fill-current text-white"/>
 </div>
 
-<div className="flex flex-col left-8 top-7 absolute text-[#97a590] opacity-50 gap-2">
+<div className="flex flex-row w-full justify-center p-5 text-white gap-10 top-10">
 
 <button onClick={() => setIsOpen(!isOpen)}>
     <div>
-            <p className={`${fugazOne.className} tracking-widest! text-[12px]!`}>
+            <p className={`${fugazOne.className} tracking-widest! text-[10px]!`}>
             STYLES
             </p>
     </div>
@@ -31,7 +31,7 @@ export default function TypographyNav() {
 
 <Link href="">
     <div>
-            <p className={`${fugazOne.className} tracking-widest! text-[12px]! z-20`}>
+            <p className={`${fugazOne.className} tracking-widest! text-[10px]! z-20`}>
         FONTS
             </p>
         </div>
@@ -39,20 +39,15 @@ export default function TypographyNav() {
 
 <Link href="/designpage/typographypage">
     <div>
-            <p className={`${fugazOne.className} tracking-widest! text-[12px]! z-20`}>
+            <p className={`${fugazOne.className} tracking-widest! text-[10px]! z-20`}>
         HOME
             </p>
         </div>
 </Link>
 
-{isOpen && 
-<div className="absolute top-7 left-0 z-30">
-    <TypographyStylesNav/>
-</div>}
-
-
 </div>
-        </div>
+
+{isOpen && <TypographyStylesNav/>}
         </div>
     )
 }

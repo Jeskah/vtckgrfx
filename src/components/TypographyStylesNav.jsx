@@ -15,15 +15,15 @@ export default function TypographyStylesNav() {
     const pathname = usePathname();
 
     return (
-<div className="relative flex w-40 overflow-scroll left-20 bottom-7.5">
-        <div className="flex flex-row gap-3">
+<div className="sticky top-0 flex overflow-scroll bg-[#000000] w-screen h-10 items-center justify-center">
+        <div className="flex flex-row gap-10">
             {styles.map(({ label, href }) => {
                 const isActive = pathname === href;
 
                 return (
                     <Link key={href} href={href}>
                         <div>
-                            <h1 className={`${fugazOne.className} tracking-widest! uppercase text-[11px]! ${isActive ? "text-[#97a590]!" : "text-[#78445C]!"}`}>
+                            <h1 className={`${fugazOne.className} tracking-widest! uppercase text-[8px]! ${isActive ? "text-white!" : "text-white/80!"}`}>
                                 {label}
                             </h1>
                         </div>
