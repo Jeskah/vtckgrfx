@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import { fugazOne } from "@/fonts";
-import { alegreyaSans } from "@/fonts";
-
 import AmolithType from "@public/Amolith-Type.svg"
 import MovingSpooky from "@public/MovingSpooky.svg"
 import Tahili from "@public/Tahili.svg"
@@ -29,20 +27,20 @@ export default function Typography() {
     const CurrentSvg = current.svg;
 
     return (
-        <div className="flex flex-col items-center w-full bottom-10 absolute">
+        <div className="flex flex-col items-center w-full bottom-70 absolute">
 
-            <div className="h-70 flex items-center justify-center text-black ">
+            <div className="flex items-center justify-center text-black ">
                 
                 <CurrentSvg
                     key={index}
-                    width={200}
-                    height={200}
+                    width={140}
+                    height={140}
                     className="[&_path]:fill-current object-contain max-h-full max-w-full animate-fade-in"
                     style={{ transform: `scale(${current.scale})` }}
                 />
             </div>
 
-            <div className="flex flex-row justify-between gap-60 mt-40 relative [&_path:fill-current] text-black]">
+            <div className="flex flex-row justify-between gap-70 absolute [&_path:fill-current] text-black] top-12">
 
                 <button 
                     onClick={prev} 

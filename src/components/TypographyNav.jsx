@@ -5,6 +5,7 @@ import { fugazOne } from "@/fonts";
 import Link from "next/link";
 import TypographyStylesNav from "./TypographyStylesNav";
 import { useState } from "react";
+import TypographySearch from "./TypographySearch";
 
 export default function TypographyNav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +15,12 @@ export default function TypographyNav() {
             
 
 
-<div className="relative bottom-1/4 left-2/7 z-20">
-<VtckGrfx className="flex w-14 [&_path]:fill-current text-white"/>
+<div className="relative left-2/7 z-20">
+<VtckGrfx className="flex w-15 [&_path]:fill-current text-white"/>
+</div>
+
+<div className="flex flex-col items-center mb-10">
+<TypographySearch/>
 </div>
 
 <div className="flex flex-row w-full justify-center p-5 text-white gap-10 top-10">
@@ -48,6 +53,9 @@ export default function TypographyNav() {
 </div>
 
 {isOpen && <TypographyStylesNav/>}
-        </div>
+
+     </div>
+
+        
     )
 }
