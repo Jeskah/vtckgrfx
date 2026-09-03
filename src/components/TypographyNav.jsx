@@ -14,8 +14,6 @@ export default function TypographyNav() {
 
 
 <div className="flex flex-col border-b-3 h-fit w-full z-50 sticky top-0 bg-black">
-            
-
 
 <div className="relative left-2/7 z-20 w-fit">
 <VtckGrfx className="flex w-15 [&_path]:fill-current text-white"/>
@@ -36,7 +34,7 @@ export default function TypographyNav() {
 </button>
 
 
-<Link href="">
+<Link href="/designpage/typographypage/fonts">
     <div>
             <p className={`${fugazOne.className} tracking-widest! text-[10px]! z-20`}>
         FONTS
