@@ -61,7 +61,7 @@ export default function FontCard() {
 
                                     <div key={detail} className="flex flex-row gap-2 h-4 items-center">
                                         <X className="w-2 h-2 [$_path]: fill-current"/>
-                                        <p className="text-[11px]! uppercase">{detail}</p>
+                                        <p className="text-[11px]!">{detail}</p>
                                         
                                     </div>
                                 
@@ -74,12 +74,12 @@ export default function FontCard() {
     style={{
         backgroundColor:font.downloadBoxColor
     }}>
-        <p className="text-[10px]! text-black font-black">BUY</p>
+        <p className="text-[8px]! text-black font-black">BUY</p>
             <Download 
                 src="/download.svg" 
                 alt="download" 
-                width={12} 
-                height={12} 
+                width={10} 
+                height={10} 
                 style={{ color:font.downloadColor }}
             />
     </div>
