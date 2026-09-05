@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { alegreyaSans } from "@/fonts";
-import AmolithType from "@public/Amolith-Type.svg"
-import MovingSpooky from "@public/MovingSpooky.svg"
-import Tahili from "@public/Tahili.svg"
+import AmolithType from "@public/Type/Amolith-Type.svg"
+import MovingSpooky from "@public/Type/MovingSpooky.svg"
+import Tahili from "@public/Type/Tahili.svg"
 import Arrow from "@public/arrow.svg"
 
 

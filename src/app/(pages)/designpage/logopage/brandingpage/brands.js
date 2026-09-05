@@ -1,4 +1,4 @@
-import AmolithLogo from "@public/Amolith-Type.svg"
+import AmolithLogo from "@public/Type/Amolith-Type.svg"
 import FistedPunkLogo from "@public/FistedPunk.svg"
 
 export const brands = [

@@ -2,9 +2,8 @@
 
 import Image from "next/image"
 import { fugazOne } from "@/fonts"
-import { alegreyaSans } from "@/fonts"
 import X from "@public/x.svg"
-import CustardLetters from "@public/CustardAllLetters.svg"
+import CustardLetters from "@public/Custard_abcxyz.svg"
 import Download from "@public/download.svg"
 
 const fonts = [
