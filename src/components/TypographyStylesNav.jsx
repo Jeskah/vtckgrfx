@@ -15,8 +15,8 @@ export default function TypographyStylesNav() {
     const pathname = usePathname();
 
     return (
-<div className="top-0 flex overflow-scroll bg-[#000000] h-10 items-center justify-center">
-        <div className="flex flex-row gap-10">
+<div className="top-50 flex overflow-scroll items-center justify-center absolute w-full">
+        <div className="flex flex-row gap-5">
             {styles.map(({ label, href }) => {
                 const isActive = pathname === href;
 

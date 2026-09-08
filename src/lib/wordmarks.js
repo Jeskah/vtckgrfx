@@ -1,7 +1,7 @@
 
 export const wordmarks = [
 
-    { name: "Amolith", src: "/Type/Amolith-Type.svg", tags: ["handwitten", "clean", "italic", "bold"]},
+    { name: "Amolith", src: "/Type/Amolith-Type.svg", tags: ["handwitten", "clean", "italic"]},
 
     { name: "Ick", src: "/Type/Ick.svg", tags:["graffiti", "street", "fun", "playful"]},
 
@@ -9,6 +9,6 @@ export const wordmarks = [
 
     { name: "Moving Spooky", src: "/Type/MovingSpooky.svg", tags: ["spooky", "gothic", "sharp", "edgy", "wacky"]},
 
-    { name: "Tahali", src: "/Type/Tahali.svg", tags: ["handwitten", "rustic", "distressed", "bold"]},
+    { name: "Tahali", src: "/Type/Tahili.svg", tags: ["handwitten", "rustic", "distressed"]},
 
 ]

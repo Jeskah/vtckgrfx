@@ -6,6 +6,7 @@ import Link from "next/link";
 import TypographyStylesNav from "./TypographyStylesNav";
 import { useState } from "react";
 import TypographySearch from "./TypographySearch";
+import SelectedTags from "@/components/SelectedTags"
 
 export default function TypographyNav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,37 +14,34 @@ export default function TypographyNav() {
     return (
 
 
-<div className="flex flex-col border-b-3 h-fit w-full z-50 sticky top-0 bg-black">
+<div className="flex flex-col border-b-3 h-83 w-full z-50 sticky top-0 bg-black">
 
-<div className="relative left-2/7 z-20 w-fit">
-<VtckGrfx className="flex w-15 [&_path]:fill-current text-white"/>
+<div className="items-center justify-center w-full flex mt-15">
+
+    <VtckGrfx className="w-17 items-center justify-center [&_path]:fill-current text-white"/>
 </div>
 
-<div className="flex flex-col items-center mb-10">
-<TypographySearch/>
-</div>
-
-<div className="flex flex-row w-full justify-center p-5 text-white gap-10 top-10">
+<div className="flex flex-row w-full justify-center text-white gap-6 mt-12">
 <Link href="/designpage/typographypage">
     <div>
-            <p className={`${fugazOne.className} tracking-widest! text-[10px]! z-20`}>
+            <p className={`${fugazOne.className} tracking-widest! text-[12px]! z-20`}>
         HOME
             </p>
         </div>
 </Link>
 
-<button onClick={() => setIsOpen(!isOpen)}>
+{/* <button onClick={() => setIsOpen(!isOpen)}>
     <div>
             <p className={`${fugazOne.className} tracking-widest! text-[10px]!`}>
         STYLES
             </p>
     </div>
-</button>
+</button> */}
 
 
 <Link href="/designpage/typographypage/fonts">
     <div>
-            <p className={`${fugazOne.className} tracking-widest! text-[10px]! z-20`}>
+            <p className={`${fugazOne.className} tracking-widest! text-[12px]! z-20`}>
         FONTS
             </p>
         </div>
@@ -51,11 +49,19 @@ export default function TypographyNav() {
 
 </div>
 
-<div className="absolute top-full w-full">
+{/* <div className="top-full w-full">
 {isOpen && <TypographyStylesNav/>}
+</div> */}
+
+<div className="flex flex-col items-center">
+<TypographySearch/>
 </div>
 
-     </div>
+<div className="absolute top-full">
+<SelectedTags/>
+</div>
+
+    </div>
 
         
     )
