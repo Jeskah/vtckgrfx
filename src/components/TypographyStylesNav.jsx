@@ -6,17 +6,17 @@ import { usePathname } from "next/navigation";
 
 const styles = [
     { label: "Graffiti", href: "/designpage/typographypage/typestyles/graff"},
-    { label: "Clean", href: "/designpage/typographypage/typestyles/clean"},
     { label: "Monograms", href: "/designpage/typographypage/typestyles/monograms"},
     { label: "Handwritten", href: "/designpage/typographypage/typestyles/handwritten"},
+    { label: "Cursive", href: "/designpage/typographypage/typestyles/cursive"}
 ];
 
 export default function TypographyStylesNav() {
     const pathname = usePathname();
 
     return (
-<div className="top-50 flex overflow-scroll items-center justify-center absolute w-full">
-        <div className="flex flex-row gap-5">
+<div className="top-53 flex overflow-scroll items-center justify-center absolute w-full">
+        <div className="flex flex-row gap-4">
             {styles.map(({ label, href }) => {
                 const isActive = pathname === href;
 

@@ -12,7 +12,7 @@ const fonts = [
         src1: CustardLetters, 
         alt: "Custard Font", 
         name: "Custard Marker", 
-        fontDetails:[ "uppercase", "letters only", "marker"],   
+        fontDetails:[ "uppercase", "letters only", "marker", "A-Z"],   
         scale: 1, 
         bgColor: "#000000", 
         alphabetColor: "#f2b944",
@@ -55,10 +55,10 @@ export default function FontCard() {
 
                             <h3 className={`${fugazOne.className} uppercase text-[18px]`}>{font.name}</h3>
 
-                                <div className="flex flex-col flex-wrap items-left">
+                                <div className="flex flex-col flex-wrap items-left h-10 gap-x-2">
                                     {font.fontDetails.map((detail) => (
 
-                                    <div key={detail} className="flex flex-row gap-2 h-4 items-center">
+                                    <div key={detail} className="flex flex-row gap-1 h-4 items-center">
                                         <X className="w-2 h-2 [$_path]: fill-current"/>
                                         <p className="text-[11px]!">{detail}</p>
                                         
@@ -68,7 +68,7 @@ export default function FontCard() {
                                     ))}
                                 </div>
 
-<button className="right-0 bottom-0 absolute m-3 flex flex-row">
+<button className="left-50 bottom-0 absolute m-11 flex flex-row">
     <div className="bg-white p-2 flex justify-center items-center align-middle rounded-[3px] gap-1"
     style={{
         backgroundColor:font.downloadBoxColor

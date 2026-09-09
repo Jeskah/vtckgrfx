@@ -19,7 +19,7 @@ export default function TypographySearch() {
 
     return (
         <>
-        <div className="border-2 border-white rounded-[50px] w-fit h-fit mt-9">
+        <div className="border-2 border-white rounded-[50px] w-fit h-fit mt-11">
             <input
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}

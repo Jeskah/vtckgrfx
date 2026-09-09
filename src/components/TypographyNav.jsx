@@ -24,24 +24,24 @@ export default function TypographyNav() {
 <div className="flex flex-row w-full justify-center text-white gap-6 mt-12">
 <Link href="/designpage/typographypage">
     <div>
-            <p className={`${fugazOne.className} tracking-widest! text-[12px]! z-20`}>
+            <p className={`${fugazOne.className} tracking-widest! text-[10px]! z-20`}>
         HOME
             </p>
         </div>
 </Link>
 
-{/* <button onClick={() => setIsOpen(!isOpen)}>
+<button onClick={() => setIsOpen(!isOpen)}>
     <div>
             <p className={`${fugazOne.className} tracking-widest! text-[10px]!`}>
         STYLES
             </p>
     </div>
-</button> */}
+</button>
 
 
 <Link href="/designpage/typographypage/fonts">
     <div>
-            <p className={`${fugazOne.className} tracking-widest! text-[12px]! z-20`}>
+            <p className={`${fugazOne.className} tracking-widest! text-[10px]! z-20`}>
         FONTS
             </p>
         </div>
@@ -49,9 +49,9 @@ export default function TypographyNav() {
 
 </div>
 
-{/* <div className="top-full w-full">
+<div className="top-full w-full">
 {isOpen && <TypographyStylesNav/>}
-</div> */}
+</div>
 
 <div className="flex flex-col items-center">
 <TypographySearch/>

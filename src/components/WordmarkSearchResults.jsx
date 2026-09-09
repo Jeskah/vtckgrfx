@@ -19,7 +19,8 @@ export default function WorkmarkSearchResults() {
                         height={100}
                         width={100}
                         src={wordmark.src}
-                        alt={wordmark.name}/>
+                        alt={wordmark.name}
+                        style={{ transform: `scale(${wordmark.scale})` }}/>
                     </div>
                 ))}
             </div>
